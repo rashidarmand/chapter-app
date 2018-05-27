@@ -4,8 +4,25 @@
         <%= image_tag 'chapterlogo.png' %>
     </div>
 
+
+
+
     <div class="loginButtons">
-        <a href="/login" class="button">Login</a>
-        <a href="/signup" class="button2">Signup</a>
+
+    <% if signed_in? %>
+      Signed in as: <%= current_user.email %>
+      <%= button_to 'Sign out', sign_out_path, method: :delete %>
+    <% else %>
+  
+    <% end %>
+
+    <div id="flash">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+    </div>
+    <%= link_to 'Sign in', sign_in_path, class:"button" %>
+    <%= link_to 'Sign up', sign_up_path, class:"button2" %>
+
     </div>
 </div>
