@@ -1,0 +1,24 @@
+<h1>Update your profile</h1>
+
+    <%= form_for(users_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :email_confirmation, "Confirm Your Email" %>
+      <%= f.email_field :email_confirmation, class: 'form-control' %>
+
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+
+        <%= form_for(users_path) do |f| %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+      
+
+      <%= f.label :password_confirmation, "Confirm your Password" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
