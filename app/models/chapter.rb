@@ -1,4 +1,5 @@
 class Chapter < ApplicationRecord
+  searchkick
   belongs_to :book
   has_many :user_chapters
   has_many :users, through: :user_chapters
