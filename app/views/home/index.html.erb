@@ -7,7 +7,7 @@
 
 
 
-    <div class="loginButtons">
+ 
 
     <% if signed_in? %>
       Signed in as: <%= current_user.email %>
@@ -21,6 +21,8 @@
         <div class="flash <%= key %>"><%= value %></div>
       <% end %>
     </div>
+    
+  <div class="loginButtons">
     <%= link_to 'Sign in', sign_in_path, class:"button" %>
     <%= link_to 'Sign up', sign_up_path, class:"button2" %>
 
