@@ -190,10 +190,6 @@ nav input[type=text] {
     padding: 5px;
 }
 
-.bookStatus {
-    width: 5px;
-    /* height: auto; */
-}
 
 .bookStatus img {
     float: left;
