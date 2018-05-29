@@ -1,5 +1,8 @@
 class Book < ApplicationRecord
+  searchkick
   has_many :chapters
+  has_many :user_books
+  has_many :books, through: :user_books
 
   validates :title, presence: true
   validates :author, presence: true
