@@ -17,5 +17,3 @@ require 'faker'
         )
 end
 
-5.times do
-    Chapter.create
