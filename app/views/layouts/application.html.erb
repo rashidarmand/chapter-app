@@ -5,12 +5,33 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-
+<nav>
+    <div class="logo"><%= image_tag 'chapterlogonav.png' %></div>
+      <span>
+        <div class="search-container">
+          <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+           <button type="submit"><i class="fa fa-search"></i></button>
+           </form>
+        </div>
+        <a href="/books">Books</a>
+         <a href="/profile">Profile</a>
+        <div class="dropdown">
+        <button class="dropbtn">Account <i class="fa fa-angle-double-down"></i></button>
+          <div class="dropContent">
+            <a href="/account">Settings</a>
+            <a href="/sign_out">Sign Out</a>
+          </div>
+        </div>
+      </span>
+  </div>
+</nav>
     
     <%= yield %>
   </body>
