@@ -68,7 +68,8 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #fff;
+    background-color: #fff;
+    z-index: 2;
 }
 
 
@@ -78,6 +79,7 @@ nav a {
     color: #000;
     text-decoration: none;
     padding: 25px;
+    background-color: #fff;
   }
   
   nav a:hover {
@@ -118,6 +120,7 @@ nav input[type=text] {
 
 .dropdown {
     float: right;
+    background: #fff;
     /* overflow: hidden; */
 }
 
