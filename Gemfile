@@ -71,4 +71,7 @@ gem "clearance"
 # Sendgrid for sending the emails
 gem "sendgrid-ruby"
 
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
 gem 'searchkick'
+
