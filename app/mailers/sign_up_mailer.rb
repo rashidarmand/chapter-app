@@ -1,9 +1,9 @@
 class SignUpMailer < ApplicationMailer
-default from: "from@example.com"
+default from: "info@chapter-app.com"
 
   def sample_email(user)
     @user = user
-    mail(to: @user.email, subject: 'Welcome to Chapter')
+    mail(to: @user.email, subject: 'Welcome to Chapter !')
   end
 
 end
