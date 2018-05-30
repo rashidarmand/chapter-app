@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round');
 
-#main {
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-}
-
 #mainContent {
     padding-top: 80px;
 }
@@ -18,6 +13,28 @@ body {
 /* Login/Signup pages */
 .logoPic {
     margin: auto;
+    width: 60%;
+    padding: 60px 5px;
+}
+
+.overlay {
+    background-image: url('chapterbg.jpg');
+    position: fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no repeat;
+    background-position: center;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.overlay a {
+    font-size: 20px;
 }
 
 .button {
@@ -106,4 +123,11 @@ body {
     height: 800px;
     margin: auto;
     padding: 16px;
+}
+
+.readSettings {
+    float: right;
+    background-color: #fffbbd;
+    width: 60px;
+    height: 80px;
 }
