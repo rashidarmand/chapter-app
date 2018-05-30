@@ -15,6 +15,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Login/Signup pages */
 .logoPic {
     margin: auto;
 }
@@ -98,4 +99,11 @@ body {
     width: 100%;
 }
 
-
+/* Read page */
+.textBox {
+    background-color: rgb(255, 243, 228);
+    width: 80%;
+    height: 800px;
+    margin: auto;
+    padding: 16px;
+}
