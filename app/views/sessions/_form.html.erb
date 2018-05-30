@@ -1,7 +1,17 @@
-<%= form_for :session, url: session_path do |form| %>
-  <div class="text-field">
+<%= form_for :session, url: session_path, class: "form-signin" do |form| %>
+<div class="text-center mb-4">
+  <%= image_tag 'chapterlogo.png' %>
+</div>
+
+<%# 
+<div class="form-label-group">
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+  <label for="inputEmail">Email address</label>
+</div> %>
+
+  <div class="form-label-group">
     <%= form.label :email %>
-    <%= form.text_field :email, type: 'email' %>
+    <%= form.email_field :email, type: 'email', class:"form-control", placeholder:"Email address", :required => true, autofocus: true %>
   </div>
 
   <div class="password-field">
