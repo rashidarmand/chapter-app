@@ -1,16 +1,23 @@
 <div id="clearance" class="password-reset">
-  <h2><%= t(".title") %></h2>
-
-  <p><%= t(".description") %></p>
-
-  <%= form_for :password, url: passwords_path do |form| %>
-    <div class="text-field">
-      <%= form.label :email %>
-      <%= form.text_field :email, type: 'email' %>
-    </div>
-
-    <div class="submit-field">
-      <%= form.submit %>
-    </div>
-  <% end %>
-</div>
+  <div class="text-center mb-4">
+    <%= image_tag 'chapterlogo.png' %>
+  </div>
+  <div class="d-flex justify-content-center text-center">
+  <div class="col-4">
+    <h2><%= t(".title") %></h2>
+    <br>
+    <p><%= t(".description") %></p>
+    <br>
+    <%= form_for :password, url: passwords_path do |form| %>
+      <div class="text-field">
+        <%= form.label :email, class:"sr-only" %>
+        <%= form.text_field :email, type: 'email', class:"form-control", placeholder:"Email Address", :required => true %>
+      </div>
+      <br>
+      <div class="submit-field">
+        <%= form.submit class: "button" %>
+      </div>
+    <% end %>
+      </div>
+  <div>
+<div>
