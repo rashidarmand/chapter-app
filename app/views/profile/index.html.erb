@@ -1,31 +1,34 @@
 <section id="mainContent">
-    <div class="leftCol">
-      <div class="progressBar">
-       <div class="bookStatus">
-       <p><strong>Hi Bob</p></strong>
-         <%= image_tag 'caterpillar.png' %> 
-       </div>
-        </br>Status: Caterpillar
-        </br>Progress bar:
-      </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="progressBar">
+          <div class="bookStatus">
+           <p><strong>Hi Bob</p></strong>
+           <div class="bookImg"><%= image_tag 'caterpillar.png' %></div>
+          </div>
+          </br>Status: Caterpillar
+          </br>Progress bar:
+        </div>
     
-      <div class="reco">
-        <p><strong>Recommended Books:</p></strong>
-       <%= image_tag 'bookicon.jpg' %> 
-         Title: </br>
-         Author: </br>
-        <a href="/read">Read</a>
-      </div>
-    </div>
+        <div class="reco">
+          <p><strong>Recommended Books:</p></strong>
+          <div class="bookImg"><%= image_tag 'bookicon.jpg' %> </div>
+           Title: </br>
+           Author: </br>
+           <a href="/read">Read</a>
+          </div>
+       </div>
 
-    <div class="rightCol">
+    <div class="col-sm-8">
       <div class="myBooks">
-      <p><strong>Bob's Books</p></strong>
-      <%= image_tag 'bookicon.jpg' %> 
-        Title: </br>
-        Author: </br>
-       <a href="/read">Read</a>
-      </div>
-    </div>
+        <p><strong>Bob's Books</p></strong>
+        <%= image_tag 'bookicon.jpg' %> 
+          Title: </br>
+          Author: </br>
+        <a href="/read">Read</a>
+       </div>
+     </div>
+   </div>
 
 </section>
