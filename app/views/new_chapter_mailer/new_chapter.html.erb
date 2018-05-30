@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @user.first_name %></h1>
+    <p> <%="This is your next chapter #{@user.first_name}"%></p>
+    <p> <%= Chapter.find(Book.find(UserBook.find_by(user_id: user.id).book_id).chapter_ids.first).content%></p>
+  </body>
+</html>

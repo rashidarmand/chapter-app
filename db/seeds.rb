@@ -14,5 +14,5 @@
     author: Faker::Book.author,
     genre: Faker::Book.genre
   )
-end
 
+end

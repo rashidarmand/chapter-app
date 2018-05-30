@@ -1,5 +1,5 @@
 class SignUpMailer < ApplicationMailer
-default from: "info@chapter-app.com"
+default from: "chapterbookworms@gmail.com"
 
   def sample_email(user)
     @user = user
