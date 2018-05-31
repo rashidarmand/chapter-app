@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_27_174504) do
+ActiveRecord::Schema.define(version: 2018_05_31_162454) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2018_05_27_174504) do
     t.boolean "read", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "priority"
   end
 
   create_table "user_chapters", force: :cascade do |t|
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 2018_05_27_174504) do
     t.boolean "read", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "bookmarked", default: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,6 +56,7 @@ ActiveRecord::Schema.define(version: 2018_05_27_174504) do
     t.string "encrypted_password", limit: 128, null: false
     t.string "confirmation_token", limit: 128
     t.string "remember_token", limit: 128, null: false
+    t.string "time_preference"
     t.index ["email"], name: "index_users_on_email"
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
