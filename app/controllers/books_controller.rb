@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
     def index
-        @books = Book.all
-        end  
- end
+        @q = Book.ransack(params[:q])
+        @books = @q.result
+      end
+end

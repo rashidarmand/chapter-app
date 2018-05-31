@@ -1,5 +1,24 @@
 <section id="mainContent">
 
-<h1>All Books</h1>
+<h1>Books</h1>
 
-</section>
+<%= search_form_for @q do |f| %>
+  <%= f.label "Search for book" %>
+  <%= f.search_field :title_or_author_or_genre_cont %>
+  <%= f.submit %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= sort_link(@q, :title) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+      <td><%= book.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

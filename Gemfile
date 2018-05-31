@@ -73,3 +73,4 @@ gem "sendgrid-ruby"
 
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
+gem 'ransack'
