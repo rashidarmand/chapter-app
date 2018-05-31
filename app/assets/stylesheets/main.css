@@ -10,6 +10,15 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    color: #7fb069;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #d65108;
+}
+
 /* Login/Signup pages */
 .logoPic {
     margin: auto;
@@ -98,6 +107,7 @@ body {
 .bookImg {
     width: 60px;
     float: left;
+    margin-right: 5px;
 }
 
 .bookStatus img {
@@ -130,4 +140,15 @@ body {
     background-color: #fffbbd;
     width: 60px;
     height: 80px;
+}
+
+/* Book list page  */
+.bookList {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.bookList img {
+    width: 60px;
 }
