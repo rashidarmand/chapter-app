@@ -9,6 +9,6 @@ class ReadController < ApplicationController
   end
 
   def chapter
-
+    @chapter = Chapter.find(params[:chapter_id])
   end
 end

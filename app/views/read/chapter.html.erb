@@ -14,16 +14,16 @@
 
 
 <center>
-        <% @chapters.each do |chapter| %>
-          <strong>Title: </strong> <%= chapter.title %></br>
-          <strong>Author: </strong> <%= chapter.book.author %></br>
-          <strong>Chapter: </strong> <%= chapter.chapter_order %></br>
+        
+          <strong>Title: </strong> <%= @chapter.title %></br>
+          <strong>Author: </strong> <%= @chapter.book.author %></br>
+          <strong>Chapter: </strong> <%= @chapter.chapter_order %></br>
 </center>
     <div id="textBox">
-          <pre><%= chapter.content %></pre></br>
+          <pre><%= @chapter.content %></pre></br>
           <%# <%= truncate(chapter.content, :length => 200) %> 
-        <% end %>
+        
     </div>
 
-    <%= will_paginate @chapters %> 
+    
 </section>
