@@ -24,10 +24,8 @@ class ScheduleJob < ApplicationJob
       end
       
     end
-    # p @@hashbrown
-    user = User.first
-    test = SendMailJob.new
-    p test.perform(user)
+    p @@hashbrown
+    
   end
 
 end
