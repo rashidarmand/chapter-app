@@ -12,4 +12,16 @@ class Chapter < ApplicationRecord
     
   end
   
+  def exceed_200_words
+    Chapter.first.content.scan(/\w+/).count
+    if self.content.scan(/\w+/).count > 200
+
+      truncate 
+
+
+    end
+
+
+  end
+
 end

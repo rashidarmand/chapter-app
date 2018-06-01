@@ -23,7 +23,7 @@ a:hover {
 .logoPic {
     margin: auto;
     width: 60%;
-    padding: 60px 5px;
+    padding: 40px 5px;
 }
 
 .overlay {
@@ -50,7 +50,7 @@ a:hover {
     background-color: #7fb069; 
     border: none;
     color: white;
-    padding: 10px 40px;
+    padding: 10px 30px;
     text-align: center;
     text-decoration: none;
     border-radius: 16px;
@@ -88,12 +88,11 @@ a:hover {
     height: auto;
     padding: 10px;
     margin: 10px;
-    border-style: dotted;
+    border: 1px solid #dadada;
 }
 
 .myBooks {
-    height: 800px;
-    border-style: dotted;
+    height: auto;
     padding: 10px;
     margin: 10px;
 }
@@ -119,7 +118,7 @@ a:hover {
     height: auto;
     padding: 10px;
     margin: 10px;
-    border-style: dotted;
+    border: 1px solid #dadada;
 }
 
 .reco img {
@@ -127,28 +126,46 @@ a:hover {
 }
 
 /* Read page */
-.textBox {
-    background-color: rgb(255, 243, 228);
+#textBox {
+    position: relative;
     width: 80%;
-    height: 800px;
+    height: auto;
     margin: auto;
     padding: 16px;
+    color: inherit;
+    background-color: inherit;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+    color: inherit;
 }
 
 .readSettings {
+    position: relative;
     float: right;
-    background-color: #fffbbd;
-    width: 60px;
-    height: 80px;
+    width: 50px;
+    padding: 5px;
+}
+
+.stgIcons {
+    width: 100%;
+}
+
+.pagination a {
+    padding: 5px;
 }
 
 /* Book list page  */
 .bookList {
-    width: 80%;
+    width: 70%;
     height: auto;
     margin: auto;
 }
 
 .bookList img {
-    width: 60px;
+    width: 130px;
+    float: left;
 }

@@ -1,27 +1,29 @@
 <section id="mainContent">
 
   <div class="readSettings">
-    
+      <%= image_submit_tag 'stg-white.svg', id:'white', class: 'stgIcons' %>
+      <%= image_submit_tag 'stg-black.svg', id: 'black', class: 'stgIcons' %>
+      <%= image_submit_tag 'stg-sepia.svg', id: 'sepia', class: 'stgIcons' %>
+      <button id="zoom"><i class="fas fa-search-plus"></i></button>
+      <button id="minus"><i class="fas fa-search-minus"></i></button>
+
+
+
+
   </div>
-    <div class="textBox">
-       <p> Test Text </p>
-        <p>God? God's turning people into insect monsters Beth. I'm the one beating them to death. Thank me. 
-        I am not putting my father in a home! He just came back into my life, and you want to, grab him and, 
-        stuff him under a mattress like last month's Victoria's Secret?! I'm a bit of a stickler Meeseeks, 
-        what about your short game? We don't whitewash it either, Morty. I mean, the pirates are really rapey.</p>
 
-        <p>Dont mind those stare goblins. We all wanna die, we're meeseeks! Nice one, Ms Pancakes. 
-        Yeah, well, tough titties.</p>
 
-        <p>Right, Crocubot. So, you're half cold unfeeling reptile, half also cold equally unfeeling machine? 
-        Lemme hear everybody say hey-yo! All the ladies say yeaaah! Everybody over thirty do this with your hand! 
-        Everybody with a red shirt jump up and down! Yo, everyone whose first name begins with an L who isn't hispanic, 
-        walk in a circle the same number of times as the square root of your age times teeenn! Don't be a baby! 
-        You avoid getting shot in real life all the time, Morty! Just do the same thing here and we'll be fine! 
-        This is because you give Morty Smith bad grades, bitch!</p>
-
-        <p>I'll be with Reuben in my workshop while you guys are having another day in Phil Collin's proverbial paradise. 
-        You don't know me! Nice, Mrs Pancakes. Real nice. It's called carpe diem Morty. Look it up.</p>
-
+<center>
+        
+          <strong>Title: </strong> <%= @chapter.title %></br>
+          <strong>Author: </strong> <%= @chapter.book.author %></br>
+          <strong>Chapter: </strong> <%= @chapter.chapter_order %></br>
+</center>
+    <div id="textBox">
+          <pre><%= @chapter.content %></pre></br>
+          <%# <%= truncate(chapter.content, :length => 200) %> 
+        
     </div>
+
+    
 </section>
