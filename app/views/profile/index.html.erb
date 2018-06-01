@@ -37,7 +37,7 @@
             <strong>Title: </strong> <%= book.title %></br>
             <strong>Author: </strong> <%= book.author %></br>
             <strong>Genre: </strong> <%= book.genre %></br>
-            <a href="/read">Read</a> </br>
+            <%= link_to 'Read', read_path(book.id) %><br>
           <%= button_to 'Remove From myBooks', "/user_books/#{book.user_books.first.id}", method: 'delete' %>
 
 

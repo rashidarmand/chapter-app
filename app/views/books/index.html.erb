@@ -8,7 +8,6 @@
         <strong>Author: </strong> <%= book.author %></br>
         <strong>Genre: </strong> <%= book.genre %></br>
         <%= link_to 'Read', read_path(book.id) %>
-        <%# <a href="/read">Read</a> </br> %>
       <% unless current_user.books.include?(book)  %>
 
         <%= form_for @user_book, :url => url_for(:controller => 'user_books', :action => 'create') do |f| %>

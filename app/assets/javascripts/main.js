@@ -47,6 +47,10 @@ document.addEventListener("turbolinks:load", function(){
      });
   });
 
+// Notice Timeout
+
+
+
 })
 
 
