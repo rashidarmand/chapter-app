@@ -16,6 +16,14 @@ class ScheduleJob < ApplicationJob
   end
 
   def perform
-    p "HELLO I AM WORKING HALLELUJAH"
+    @@hashbrown.each do |key,value|
+      User.all.each do |user|
+      if user[:time_preference] == key
+        @@hashbrown[key].push([user[:first_name], user[:email]])
+      end
+      end
+      p @@hashbrown
+    end
   end
+
 end
