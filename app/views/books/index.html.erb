@@ -11,19 +11,6 @@
         <%# <a href="/read">Read</a> </br> %>
       <% unless current_user.books.include?(book)  %>
 
-<<<<<<< HEAD
-   <div class="bookList">
-        <p><strong>Available Books</p></strong>
-
-        <% @books.each do |book| %>
-        <%= image_tag 'https://d30y9cdsu7xlg0.cloudfront.net/png/498536-200.png' %> 
-          <strong>Title: </strong> <%= book.title %></br>
-          <strong>Author: </strong> <%= book.author %></br>
-          <strong>Genre: </strong> <%= book.genre %></br>
-          <a href="/read">Read</a> </br>
-          <i class="fas fa-plus-circle"></i> Add to myBooks
-        <hr />
-=======
         <%= form_for @user_book, :url => url_for(:controller => 'user_books', :action => 'create') do |f| %>
           <%= f.hidden_field(:user_id, value: current_user.id) %>
           <%= f.hidden_field(:book_id, value: book.id) %>
@@ -32,7 +19,6 @@
           <%= button_tag( :class => "button_green") do %>
             <i class="fas fa-plus-circle"></i> Add To myBooks
           <% end %>
->>>>>>> 4b464b7a23d39dc59ca8bdd30acf6f6734ff90e0
         <% end %>
         
       <% end %>
