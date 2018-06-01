@@ -129,10 +129,18 @@ a:hover {
 #textBox {
     position: relative;
     width: 80%;
-    height: 800px;
+    height: auto;
     margin: auto;
     padding: 16px;
-    font-size: 1em;
+    color: inherit;
+    background-color: inherit;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+    color: inherit;
 }
 
 .readSettings {
@@ -144,6 +152,10 @@ a:hover {
 
 .stgIcons {
     width: 100%;
+}
+
+.pagination a {
+    padding: 5px;
 }
 
 /* Book list page  */
