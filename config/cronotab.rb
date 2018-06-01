@@ -13,4 +13,6 @@
 #
 # Crono.perform(TestJob).every 2.days, at: '15:30'
 #
-Crono.perform(ScheduleJob).every 10.seconds
+Crono.perform(SendMailJob).every 3.seconds
+
+# Crono.perform(ScheduleJob).every 1.day, at: '00:00'

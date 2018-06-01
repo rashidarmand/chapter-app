@@ -22,8 +22,12 @@ class ScheduleJob < ApplicationJob
         @@hashbrown[key].push([user[:first_name], user[:email]])
       end
       end
-      p @@hashbrown
+      
     end
+    # p @@hashbrown
+    user = User.first
+    test = SendMailJob.new
+    p test.perform(user)
   end
 
 end
