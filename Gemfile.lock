@@ -86,6 +86,10 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    crono (1.1.2)
+      activerecord (>= 4.0)
+      activesupport (>= 4.0)
+    daemons (1.2.6)
     email_validator (1.6.0)
       activemodel
     erubi (1.7.1)
@@ -226,6 +230,8 @@ DEPENDENCIES
   chromedriver-helper
   clearance
   coffee-rails (~> 4.2)
+  crono
+  daemons
   faker!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

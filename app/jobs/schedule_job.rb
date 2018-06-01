@@ -15,7 +15,7 @@ class ScheduleJob < ApplicationJob
     @@hashbrown
   end
 
-  def perform(*args)
-    # Do something later
+  def perform
+    p "HELLO I AM WORKING HALLELUJAH"
   end
 end
