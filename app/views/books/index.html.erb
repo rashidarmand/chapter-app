@@ -1,19 +1,29 @@
 <section id="mainContent">
+  <p id="notice"><%= notice %></p>
+  <div class="bookList">
+    <p><strong>Available Books</p></strong>
+    <% @books.each do |book| %>
+      <%= image_tag 'bookicon.jpg' %> 
+        <strong>Title: </strong> <%= book.title %> </br>
+        <strong>Author: </strong> <%= book.author %></br>
+        <strong>Genre: </strong> <%= book.genre %></br>
+        <%= link_to 'Read', read_path(book.id) %>
+        <%# <a href="/read">Read</a> </br> %>
+      <% unless current_user.books.include?(book)  %>
 
-   <div class="bookList">
-        <p><strong>Available Books</p></strong>
-
-        <% @books.each do |book| %>
-        <%= image_tag 'bookicon.jpg' %> 
-          <strong>Title: </strong> <%= book.title %> </br>
-          <strong>Author: </strong> <%= book.author %></br>
-          <strong>Genre: </strong> <%= book.genre %></br>
-          <a href="/read">Read</a> </br>
-          <i class="fas fa-plus-circle"></i> Add to myBooks
-        <hr />
+        <%= form_for @user_book, :url => url_for(:controller => 'user_books', :action => 'create') do |f| %>
+          <%= f.hidden_field(:user_id, value: current_user.id) %>
+          <%= f.hidden_field(:book_id, value: book.id) %>
+          <%= f.hidden_field(:read, value: false) %>
+          <%= f.hidden_field(:priority, value: nil) %>
+          <%= button_tag( :class => "button_green") do %>
+            <i class="fas fa-plus-circle"></i> Add To myBooks
+          <% end %>
         <% end %>
-
-
-   </div>
+        
+      <% end %>
+      <hr />
+    <% end %>
+  </div>
 
 </section>
