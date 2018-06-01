@@ -12,8 +12,9 @@ Rails.application.routes.draw do
   delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
   get "/sign_up" => "clearance/users#new", as: "sign_up"
 
-  
+  get '/read/:id/chapter/:chapter_id' => 'read#chapter', as: 'read_chapter'
   root 'home#index'
+  resources :user_books
   resources :profile
   resources :read
   resources :books

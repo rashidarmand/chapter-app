@@ -31,6 +31,22 @@
     <div class="col-sm-8">
       <div class="myBooks">
         <p><strong>Bob's Books</p></strong>
+        <p id="notice"><%= notice %></p>
+        <% @current_user_books.each do |book| %>
+          <%= image_tag 'bookicon.jpg' %> 
+            <strong>Title: </strong> <%= book.title %></br>
+            <strong>Author: </strong> <%= book.author %></br>
+            <strong>Genre: </strong> <%= book.genre %></br>
+            <a href="/read">Read</a> </br>
+          <%= button_to 'Remove From myBooks', "/user_books/#{book.user_books.first.id}", method: 'delete' %>
+
+
+
+
+          <hr />
+        <% end %>
+
+
         <%= image_tag 'bookicon.jpg' %> 
           <strong>Title: </strong> </br>
           <strong>Author: </strong> </br>
