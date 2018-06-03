@@ -8,13 +8,12 @@ class UserBooksController < ApplicationController
 
   def create
     @user_book = UserBook.new(user_book_params)
-
     respond_to do |format|
       if @user_book.save
         format.html { redirect_to books_path, notice: 'Book successfully added!' }
         format.json { render :show, status: :created, location: books_path }
       else
-        format.html { render :new }
+        format.html { redirect_to books_path, notice: 'Oops There Was An Issue Adding The Book. Please Try Again Later !' }
         format.json { render json: books_path.errors, status: :unprocessable_entity }
       end
     end

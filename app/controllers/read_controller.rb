@@ -10,5 +10,6 @@ class ReadController < ApplicationController
 
   def chapter
     @chapter = Chapter.find(params[:chapter_id])
+    @chunk_of_chapter = @chapter.broken_up_chapters.paginate(:page => params[:page], :per_page => 1)
   end
 end

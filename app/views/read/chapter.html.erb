@@ -20,9 +20,12 @@
 
 </center>
 
-	<div id="textBox">
+	<div id="textBox" class='text-center'>
 		<% if @chapter.long_chapter? %>
-			<%= @chapter.broken_up_chapters.paginate(:page => params[:page], :per_page => 1) %></br>
+			<%= @chunk_of_chapter.each do |chunk| %>
+				<%= chunk %>
+			<% end %>
+			<%= will_paginate @chunk_of_chapter %></br>
 		<% else %>
 			<pre><%= @chapter.content %></pre></br>
 		<% end %>
