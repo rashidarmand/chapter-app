@@ -17,14 +17,17 @@ class ScheduleJob < ApplicationJob
 
   def perform
     @@hashbrown.each do |key,value|
-      User.all.each do |user|
-      if user[:time_preference] == key
-        @@hashbrown[key].push([user[:first_name], user[:email]])
+      User.find_by(time_preference:key).each do |user|
+        step1 = UserBook.find_by(user_id: user.id, priority: 1)
+        step2 = Chapter.where(book_id: step1.book_id)
+        step3 = 
+
+        @@hashbrown[key].push([user, chapter])
       end
       end
       
     end
-    p @@hashbrown
+    @@hashbrown
     
   end
 
