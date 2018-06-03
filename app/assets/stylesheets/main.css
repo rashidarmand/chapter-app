@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round');
 
-#main {
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-}
-
 #mainContent {
     padding-top: 80px;
 }
@@ -15,23 +10,74 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    color: #7fb069;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #d65108;
+}
+
 /* Login/Signup pages */
 .logoPic {
     margin: auto;
+    width: 60%;
+    /* padding: 10px 5px; */
+}
+
+.overlay {
+    background-image: url('chapterbg.jpg');
+    position: fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no repeat;
+    background-position: center;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.overlay a {
+    font-size: 20px;
 }
 
 .button {
     background-color: #7fb069; 
     border: none;
     color: white;
-    padding: 10px 40px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     border-radius: 16px;
     font-size: 20px;
 }
 
-.button:hover {
+.small_button {
+    background-color: #7fb069; 
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+}
+
+.remove_button {
+    background-color: firebrick; 
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+}
+
+.button:hover, .button2:hover, .small_button:hover, .remove_button:hover {
     background-color: black;
 }
 
@@ -39,16 +85,12 @@ body {
     background-color: #7a7a7a; 
     border: none;
     color: white;
-    padding: 10px 36px;
+    padding: 10px 30px;
     text-align: center;
     text-decoration: none;
     border-radius: 16px;
     font-size: 20px;
     top: 5px;
-}
-
-.button2:hover {
-    background-color: black;
 }
 
 .loginButtons {
@@ -62,12 +104,11 @@ body {
     height: auto;
     padding: 10px;
     margin: 10px;
-    border-style: dotted;
+    border: 1px solid #dadada;
 }
 
 .myBooks {
-    height: 800px;
-    border-style: dotted;
+    height: auto;
     padding: 10px;
     margin: 10px;
 }
@@ -81,6 +122,7 @@ body {
 .bookImg {
     width: 60px;
     float: left;
+    margin-right: 5px;
 }
 
 .bookStatus img {
@@ -92,7 +134,7 @@ body {
     height: auto;
     padding: 10px;
     margin: 10px;
-    border-style: dotted;
+    border: 1px solid #dadada;
 }
 
 .reco img {
@@ -100,10 +142,50 @@ body {
 }
 
 /* Read page */
-.textBox {
-    background-color: rgb(255, 243, 228);
+#textBox {
+    position: relative;
     width: 80%;
-    height: 800px;
+    height: auto;
     margin: auto;
     padding: 16px;
+    color: inherit;
+    background-color: inherit;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+    color: inherit;
+}
+
+.readSettings {
+    position: relative;
+    float: right;
+    width: 50px;
+    padding: 5px;
+}
+
+.stgIcons {
+    width: 100%;
+}
+
+.pagination a {
+    padding: 5px;
+}
+
+/* Book list page  */
+.bookList {
+    height: auto;
+    margin: auto;
+}
+.mainBookList {
+    width: 70%;
+    height: auto;
+    margin: auto;
+}
+
+.bookList img, .mainBookList img {
+    width: 130px;
+    float: left;
 }

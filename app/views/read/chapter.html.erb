@@ -1,0 +1,28 @@
+<section id="mainContent">
+
+  <div class="readSettings">
+	  <%= image_submit_tag 'stg-white.svg', id:'white', class: 'stgIcons' %>
+	  <%= image_submit_tag 'stg-black.svg', id: 'black', class: 'stgIcons' %>
+	  <%= image_submit_tag 'stg-sepia.svg', id: 'sepia', class: 'stgIcons' %>
+	  <button id="zoom"><i class="fas fa-search-plus"></i></button>
+	  <button id="minus"><i class="fas fa-search-minus"></i></button>
+		<%# BUTTON GOES HERE TO BOOKMARK THE CHAPTER %>
+  </div>
+
+<center>  
+
+	<strong>Book: </strong> <%= @chapter.book.title %></br>
+	<strong>Chapter: </strong><%= @chapter.chapter_order %></br>
+	<strong><%= @chapter.title %></strong></br>
+
+</center>
+
+	<div id="textBox">
+		<% if @chapter.long_chapter? %>
+			<%= @chapter.broken_up_chapters.paginate(:page => params[:page], :per_page => 1) %></br>
+		<% else %>
+			<pre><%= @chapter.content %></pre></br>
+		<% end %>
+	</div>
+
+</section>

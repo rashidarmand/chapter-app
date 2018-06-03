@@ -3,31 +3,66 @@
     <div class="row">
       <div class="col-sm-4">
         <div class="progressBar">
-          <div class="bookStatus">
-           <p><strong>Hi Bob</p></strong>
-           <div class="bookImg"><%= image_tag 'caterpillar.png' %></div>
+
+          <div class="d-flex">
+            <div class="bookStatus">
+            <p><strong>Hi <%= current_user.first_name %> ! 👋</p></strong>
+            <div class="bookImg"><%= image_tag 'caterpillar.png' %></div>
+            </div>
+            <div class="container">
+              <strong>Name:</strong> <%= current_user.full_name %></br>
+              <strong>Member Since:</strong> <%= current_user.created_at.strftime("%-m/%-d/%y") %></br>
+              <strong>Books Read:</strong> <%= current_user.books_read %></br>
+              <strong>Chapters Read:</strong> <%= current_user.chapters_read %></br>
+              <strong>Status:</strong> Caterpillar</br>
+              <strong>Progress bar:</strong></br>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%"></div>
+              </div>
+            </div>
+            
           </div>
-          </br>Status: Caterpillar
-          </br>Progress bar:
+         
         </div>
     
         <div class="reco">
-          <p><strong>Recommended Books:</p></strong>
+          <p><strong>Bookmarked Chapters:</p></strong>
           <div class="bookImg"><%= image_tag 'bookicon.jpg' %> </div>
-           Title: </br>
-           Author: </br>
+           <strong>Title: </strong>How to be awesome </br>
+           <strong>Author: </strong>Ronnie Digital</br>
            <a href="/read">Read</a>
           </div>
-       </div>
+        </div>
 
-    <div class="col-sm-8">
-      <div class="myBooks">
-        <p><strong>Bob's Books</p></strong>
-        <%= image_tag 'bookicon.jpg' %> 
-          Title: </br>
-          Author: </br>
-        <a href="/read">Read</a>
-       </div>
+        <div class="col-sm-8">
+          <div class="myBooks">
+            <p id="notice"><%= notice %></p>
+            <h2><strong><%= current_user.first_name %>'s Books</h2></strong>
+            <div class="bookList">
+              <% unless @current_user_books.empty? %>
+              
+                <% @current_user_books.each do |book| %>
+                  <%= image_tag 'bookicon.jpg' %>
+                    <strong>Title: </strong> <%= book.title %></br>
+                    <strong>Author: </strong> <%= book.author %></br>
+                    <strong>Genre: </strong> <%= book.genre %></br>
+                    <%= link_to 'Read', read_path(book.id) %><br>
+                  <%= button_to "/user_books/#{book.user_books.first.id}", method: 'delete', :class => 'remove_button' do %>
+                    <i class="fas fa-minus-circle"></i> Remove from MyBooks
+                  <% end %>
+                  <hr/>
+                <% end %>
+            </div>
+            <% else %>
+
+              <div class="text-center">
+                <p><h3>Your Book List is Empty 😕</h3></p>
+                <p><strong>Hint:</strong> Try clicking on 'Books' from the menu above 👆 to browse titles and add to your collection !</p>
+              </div>
+              
+            <% end %>
+
+        </div>
      </div>
    </div>
 
