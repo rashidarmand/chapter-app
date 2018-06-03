@@ -1,32 +1,23 @@
 <div class="overlay">
 
+  <div class="container">
   
-    <%= image_tag 'chapterlogo-white.svg', class: 'logoPic' %>
-
-
-    <p>Reading on your own time.</p>
-
-
-
-
- 
-
     <% if signed_in? %>
-      Signed in as: <%= current_user.email %>
-      <%= button_to 'Sign out', sign_out_path, method: :delete %>
+
+      <br> <br>
+      <%= image_tag 'chapterlogo-white.svg', class: 'logoPic' %><br>
+      Signed in as: <%= current_user.email %><br> <br>
+      <%= button_to 'Sign Out', sign_out_path, method: :delete, class:"button" %>
+
     <% else %>
-  
+
+      <br> <br>
+      <%= image_tag 'chapterlogo-white.svg', class: 'logoPic' %><br>
+      <p>Reading on your own time!</p> <br>
+      <%= button_to 'Sign In', sign_in_path, method: :get, class:"button" %>
+      <%= button_to 'Sign Up', sign_up_path, method: :get, class:"button2" %>   
+
     <% end %>
 
-    <div id="flash">
-      <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
-      <% end %>
-    </div>
-    
-  <div class="loginButtons">
-    <%= link_to 'Sign in', sign_in_path, class:"button" %>
-    <%= link_to 'Sign up', sign_up_path, class:"button2" %>
-
-    </div>
+  </div>
 </div>
