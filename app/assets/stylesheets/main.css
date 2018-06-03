@@ -186,6 +186,10 @@ pre {
     border: none;
 }
 
+.iconBtn:hover {
+    background-color: #7fb069;
+}
+
 
 /* Book list page  */
 .bookList {
