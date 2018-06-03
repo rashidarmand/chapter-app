@@ -16,7 +16,7 @@
     <div class="col-4">
       <h3>Chapters</h3>
       <% @chapters.each do |chapter| %>
-        <%= link_to "#{chapter.title}", read_chapter_path(@book.id, chapter.id) %><br>
+        <%= link_to "Chapter #{chapter.chapter_order}: #{chapter.title}", read_chapter_path(@book.id, chapter.id) %><br>
       <% end %>
 
        </div>

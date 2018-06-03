@@ -12,4 +12,13 @@ class User < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def books_read
+    self.books.where("read = true").count
+  end
+
+  def chapters_read
+    self.chapters.where("read = true").count
+  end
+
 end
