@@ -1,0 +1,2 @@
+class NextChapterMailer < ApplicationMailer
+end
