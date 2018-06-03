@@ -73,10 +73,6 @@ gem "sendgrid-ruby"
 
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
-<<<<<<< HEAD
-gem 'ransack'
-=======
 gem 'jquery-rails'
 
 gem 'will_paginate'
->>>>>>> f444f850313afbf2ee1f1498762baf188341dc24
