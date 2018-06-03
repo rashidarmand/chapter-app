@@ -1,13 +1,16 @@
 <section id="mainContent">
 
   <div class="readSettings">
-	  <%= image_submit_tag 'stg-white.svg', id:'white', class: 'stgIcons' %>
+	  <%= image_submit_tag 'stg-white.svg', id: 'white', class: 'stgIcons' %>
 	  <%= image_submit_tag 'stg-black.svg', id: 'black', class: 'stgIcons' %>
 	  <%= image_submit_tag 'stg-sepia.svg', id: 'sepia', class: 'stgIcons' %>
-	  <button id="zoom"><i class="fas fa-search-plus"></i></button>
-	  <button id="minus"><i class="fas fa-search-minus"></i></button>
-		<%# BUTTON GOES HERE TO BOOKMARK THE CHAPTER %>
+	  <button id="zoom" class="iconBtn" title="Increase Font Size"><i class="fas fa-search-plus"></i></button>
+	  <button id="minus" class="iconBtn" title="Decrease Font Size"><i class="fas fa-search-minus"></i></button>
   </div>
+
+	<div class="bookmark">
+		<button id="bm" class="iconBtn" title="Bookmark this chapter"><i class="far fa-bookmark"></i></button>
+	</div>
 
 <center>  
 

@@ -163,7 +163,14 @@ pre {
     position: relative;
     float: right;
     width: 50px;
-    padding: 5px;
+    padding: 5px 15px 0px 0px;
+}
+
+.bookmark {
+    position: relative;
+    float: left;
+    width: 50px;
+    padding: 10px 0px 0px 15px;
 }
 
 .stgIcons {
@@ -173,6 +180,16 @@ pre {
 .pagination a {
     padding: 5px;
 }
+
+.iconBtn {
+    background-color: white;
+    border: none;
+}
+
+.iconBtn:hover {
+    background-color: #7fb069;
+}
+
 
 /* Book list page  */
 .bookList {
