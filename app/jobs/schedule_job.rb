@@ -16,18 +16,18 @@ class ScheduleJob < ApplicationJob
   end
 
   def perform
-    @@hashbrown.each do |key,value|
-      User.find_by(time_preference:key).each do |user|
-        step1 = UserBook.find_by(user_id: user.id, priority: 1)
-        step2 = Chapter.where(book_id: step1.book_id)
-        step3 = 
+     @@hashbrown.each do |key,value|
+      chapter = FindChapterJob.new
+      User.all.each do |user|
+      
+      if user[:time_preference] == key
 
-        @@hashbrown[key].push([user, chapter])
+        @@hashbrown[key].push([user, chapter.perform(user)])
       end
       end
       
     end
-    @@hashbrown
+    p @@hashbrown
     
   end
 
