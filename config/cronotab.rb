@@ -13,6 +13,5 @@
 #
 # Crono.perform(TestJob).every 2.days, at: '15:30'
 #
-Crono.perform(SendMailJob).every 3.seconds
 
-# Crono.perform(ScheduleJob).every 1.day, at: '00:00'
+Crono.perform(DailyQueueJob).every 1.day, at: '00:00'
