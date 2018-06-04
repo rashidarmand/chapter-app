@@ -211,6 +211,12 @@ pre {
     padding: 10px;
 }
 
+.previousChap {
+    position: relative;
+    float: left;
+    padding: 10px;
+}
+
 /* Book list page  */
 .bookList {
     height: auto;
