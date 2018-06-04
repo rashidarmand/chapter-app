@@ -35,8 +35,8 @@ class UserBooksController < ApplicationController
     @user_book = UserBook.find_by(user_book_params.values)
     # @user_book = UserBook.find(params[:id])
     respond_to do |format|
-      if @user_book.update(user_book_params.keys, user_book_params.values)
-        format.html { redirect_to profile_path, notice: 'Book Completed!' }
+      if @user_book.update(user_book_params)
+        format.html { redirect_to profile_index_path, notice: 'Book Completed!' }
         format.json { render :show, status: :created, location: books_path }
       else
         format.html { render :new }

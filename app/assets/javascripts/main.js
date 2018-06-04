@@ -6,21 +6,30 @@ document.addEventListener("turbolinks:load", function(){
     // sepia setting
     $(document).ready(function(){
         $("#sepia").click(function(){
-            $("#textBox").css({"background-color": "#d8d6bf", "color": "#000"});
+            $("#readPage").css({"background-color": "#d8d6bf", "color": "#000"});
+            $(".fas.fa-search-plus").css({"color": "#000"});
+            $(".fas.fa-search-minus").css({"color": "#000"});
+            $(".far.fa-bookmark").css({"color": "#000"});
         });
     });
     
     // black setting
     $(document).ready(function(){
         $("#black").click(function(){
-            $("#textBox").css({"background-color": "#000", "color": "#fff"});
+            $("#readPage").css({"background-color": "#000", "color": "#fff"});
+            $(".fas.fa-search-plus").css({"color": "#fff"});
+            $(".fas.fa-search-minus").css({"color": "#fff"});
+            $(".far.fa-bookmark").css({"color": "#fff"});
         });
     });
     
     // white setting
     $(document).ready(function(){
         $("#white").click(function(){
-            $("#textBox").css({"background-color": "#fff", "color": "#000"});
+            $("#readPage").css({"background-color": "#fff", "color": "#000"});
+            $(".fas.fa-search-plus").css({"color": "#000"});
+            $(".fas.fa-search-minus").css({"color": "#000"});
+            $(".far.fa-bookmark").css({"color": "#000"});
         });
     });
 
