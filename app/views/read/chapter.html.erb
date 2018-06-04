@@ -1,18 +1,19 @@
 <section id="mainContent">
+<div id="readPage">
 
   <div class="readSettings">
 	  <%= image_submit_tag 'stg-white.svg', id: 'white', class: 'stgIcons' %>
 	  <%= image_submit_tag 'stg-black.svg', id: 'black', class: 'stgIcons' %>
 	  <%= image_submit_tag 'stg-sepia.svg', id: 'sepia', class: 'stgIcons' %>
-	  <button id="zoom" class="iconBtn" title="Increase Font Size"><i class="fas fa-search-plus"></i></button>
-	  <button id="minus" class="iconBtn" title="Decrease Font Size"><i class="fas fa-search-minus"></i></button>
+	  <button id="zoom" class="iconBtn" title="Increase Font Size"><i class="fas fa-search-plus fa-lg"></i></button>
+	  <button id="minus" class="iconBtn" title="Decrease Font Size"><i class="fas fa-search-minus fa-lg"></i></button>
   </div>
 
 	<div class="bookmark">
-		<button id="bm" class="iconBtn" title="Bookmark this chapter"><i class="far fa-bookmark"></i></button>
+		<button id="bm" class="iconBtn" title="Bookmark this chapter"><i class="far fa-bookmark fa-2x"></i></button>
 	</div>
 
-<center>  
+	<center>  
 
 	<strong>Book: </strong> <%= @chapter.book.title %></br>
 	<strong>Chapter: </strong><%= @chapter.chapter_order %></br>
@@ -31,7 +32,10 @@
 		<% else %>
 			<pre><%= @chapter.content %></pre></br>
 		<% end %>
-</center> 
+
+
+ 	<%= button_to 'Done Reading', sign_in_path, method: :get, class:"doneBtn" %>
+	 </center>
 
 <%# 'Previous Chapter' link shows only if not the first chapter of the book %>
 <% if @chapter != @chapter.book.chapters.first %>
@@ -58,4 +62,7 @@
 
 
 
+</div>
 </section>
+
+
