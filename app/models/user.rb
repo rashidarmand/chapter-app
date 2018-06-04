@@ -20,11 +20,9 @@ class User < ApplicationRecord
  end
 
   def chapters_read
-    if self.chapters.length==0
-      return 0
-    else
+    
       UserChapter.where(user_id:self.id, read:true).length
-    end
+    
   end
 
 end
