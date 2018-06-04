@@ -14,11 +14,15 @@ class User < ApplicationRecord
   end
 
   def books_read
-    self.books.where("read = true").count
-  end
+    
+      UserBook.where(user_id:self.id, read:true).length
+    
+ end
 
   def chapters_read
-    self.chapters.where("read = true").count
+    
+      UserChapter.where(user_id:self.id, read:true).length
+    
   end
 
 end

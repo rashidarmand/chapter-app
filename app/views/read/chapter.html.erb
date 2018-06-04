@@ -1,18 +1,19 @@
 <section id="mainContent">
+<div id="readPage">
 
   <div class="readSettings">
 	  <%= image_submit_tag 'stg-white.svg', id: 'white', class: 'stgIcons' %>
 	  <%= image_submit_tag 'stg-black.svg', id: 'black', class: 'stgIcons' %>
 	  <%= image_submit_tag 'stg-sepia.svg', id: 'sepia', class: 'stgIcons' %>
-	  <button id="zoom" class="iconBtn" title="Increase Font Size"><i class="fas fa-search-plus"></i></button>
-	  <button id="minus" class="iconBtn" title="Decrease Font Size"><i class="fas fa-search-minus"></i></button>
+	  <button id="zoom" class="iconBtn" title="Increase Font Size"><i class="fas fa-search-plus fa-lg"></i></button>
+	  <button id="minus" class="iconBtn" title="Decrease Font Size"><i class="fas fa-search-minus fa-lg"></i></button>
   </div>
 
 	<div class="bookmark">
-		<button id="bm" class="iconBtn" title="Bookmark this chapter"><i class="far fa-bookmark"></i></button>
+		<button id="bm" class="iconBtn" title="Bookmark this chapter"><i class="far fa-bookmark fa-2x"></i></button>
 	</div>
 
-<center>  
+	<center>  
 
 	<strong>Book: </strong> <%= @chapter.book.title %></br>
 	<strong>Chapter: </strong><%= @chapter.chapter_order %></br>
@@ -31,7 +32,10 @@
 		<% else %>
 			<pre><%= @chapter.content %></pre></br>
 		<% end %>
-</center> 
+
+
+ 	<%= button_to 'Done Reading', sign_in_path, method: :get, class:"doneBtn" %>
+	 </center>
 
 <%# 'Previous Chapter' link shows only if not the first chapter of the book %>
 <% if @chapter != @chapter.book.chapters.first %>
@@ -39,7 +43,7 @@
 <% end %>
 
 <%# If on the last chapter, show the 'Book Finished' link. Otherwise show 'Next Chapter' link %>
-<% if @chapter == @chapter.book.chapters.last %>
+<% if @chapter == @chapter.book.chapters.last && @user_book.read == false %>
 	<%= form_for @user_book, :url => url_for(:controller => 'user_books', :action => 'update') do |f| %>
     <%= f.hidden_field(:user_id, value: current_user.id) %>
     <%= f.hidden_field(:book_id, value: @chapter.book.id) %>
@@ -49,7 +53,8 @@
       <i class="fas fa-plus-circle"></i> Book Finished
     <% end %>
   <% end %>
- 
+<% elsif @chapter == @chapter.book.chapters.last %> 
+	<%= link_to 'Book Already Completed', root_path, class: 'nextChap' %>
 <% else %>
  <%= link_to 'Next Chapter >', read_chapter_path(@chapter.book.id, @next_chapter.id), class: 'nextChap' %>
 <% end %>
@@ -57,4 +62,7 @@
 
 
 
+</div>
 </section>
+
+
