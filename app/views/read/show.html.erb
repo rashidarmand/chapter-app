@@ -5,12 +5,14 @@
   <div class="row">
     <div class="col-sm">
       <%= image_tag @book.image %><br>
-      <strong>Title: </strong> <%= @book.title  %><br>
-      <strong>Author: </strong> <%= @book.author %><br>
-      <strong>Genre: </strong> <%= @book.genre  %><br>
     </div>
    
     <div class="col-sm">
+      <h2><%= @book.title  %><br></h2>
+      <strong>Author: </strong> <%= @book.author %><br>
+      <strong>Genre: </strong> <%= @book.genre  %><br>
+      
+      <p></p>
       <h3>Chapters</h3>
       <% @chapters.each do |chapter| %>
         <%= link_to "Chapter #{chapter.chapter_order}: #{chapter.title}", read_chapter_path(@book.id, chapter.id) %><br>
