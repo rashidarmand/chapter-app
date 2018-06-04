@@ -55,9 +55,17 @@ document.addEventListener("turbolinks:load", function(){
 })
 
 
-function isProgressFull(){
+function bookProgress(){
     booksRead = parseInt(document.getElementById("books-read").innerHTML);
-    if (booksRead > 7){
+    userRank = document.getElementById("user-rank");
+    if(booksRead < 4){
+        userRank.innerHTML = "Caterpillar";
+    }
+    else if (booksRead > 4 && booksRead < 8){
+        userRank.innerHTML = "Cocoon";
+    }
+    else if (booksRead > 7){
+        userRank.innerHTML = "Butterfly"
       elements = document.getElementsByClassName("book-progress-bar");
       for(let i = 0; i < elements.length; i++){
           elements[i].classList.add("hidden");
