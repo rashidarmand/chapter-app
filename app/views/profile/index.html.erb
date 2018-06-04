@@ -42,7 +42,7 @@
               <% unless @current_user_books.empty? %>
               
                 <% @current_user_books.each do |book| %>
-                  <%= image_tag 'bookicon.jpg' %>
+                  <%= image_tag book.image %>
                     <strong>Title: </strong> <%= book.title %></br>
                     <strong>Author: </strong> <%= book.author %></br>
                     <strong>Genre: </strong> <%= book.genre %></br>
