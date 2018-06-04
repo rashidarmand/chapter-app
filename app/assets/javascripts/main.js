@@ -1,5 +1,6 @@
 // Reader Settings
 // event listener to refresh turbolinks
+
 document.addEventListener("turbolinks:load", function(){
 
     // sepia setting
@@ -54,10 +55,13 @@ document.addEventListener("turbolinks:load", function(){
 })
 
 
-
-
-
-
-
-
+function isProgressFull(){
+    booksRead = parseInt(document.getElementById("books-read").innerHTML);
+    if (booksRead > 7){
+      elements = document.getElementsByClassName("book-progress-bar");
+      for(let i = 0; i < elements.length; i++){
+          elements[i].classList.add("hidden");
+      }
+    }  
+}
 
