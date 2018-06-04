@@ -37,9 +37,26 @@
 
 </center> 
 
- <%#= link_to '< Previous Chapter', read_chapter_path(@chapter.book.id, @previous_chapter.id), class: 'prevChap' %>
+<%# 'Previous Chapter' link shows only if not the first chapter of the book %>
+<% if @chapter != @chapter.book.chapters.first %>
+ <%= link_to '< Previous Chapter', read_chapter_path(@chapter.book.id, @previous_chapter.id), class: 'previousChap' %>
+<% end %>
 
+<%# If on the last chapter, show the 'Book Finished' link. Otherwise show 'Next Chapter' link %>
+<% if @chapter == @chapter.book.chapters.last %>
+	<%= form_for @user_book, :url => url_for(:controller => 'user_books', :action => 'update') do |f| %>
+    <%= f.hidden_field(:user_id, value: current_user.id) %>
+    <%= f.hidden_field(:book_id, value: @chapter.book.id) %>
+    <%= f.hidden_field(:read, value: true) %>
+    <%= f.hidden_field(:priority, value: nil) %>
+    <%= button_tag( :class => 'nextChap') do %>
+      <i class="fas fa-plus-circle"></i> Book Finished
+    <% end %>
+  <% end %>
+ 
+<% else %>
  <%= link_to 'Next Chapter >', read_chapter_path(@chapter.book.id, @next_chapter.id), class: 'nextChap' %>
+<% end %>
 	
 
 
