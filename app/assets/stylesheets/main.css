@@ -157,12 +157,15 @@ a:hover {
 }
 .col-sm img {
     width: 80%;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
-
-
 /* Read page */
+#readPage {
+    width: 100%;
+    height: 100%;
+}
+
 #textBox {
     position: relative;
     width: 80%;
@@ -182,9 +185,12 @@ pre {
 
 .readSettings {
     position: fixed;
-    float: right;
-    width: 60px;
+    left: 91%;
+    width: 65px;
     padding: 5px 15px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .bookmark {
@@ -196,6 +202,7 @@ pre {
 
 .stgIcons {
     width: 100%;
+    height: 50%;
 }
 
 .stgIcons:hover {
@@ -211,7 +218,7 @@ pre {
 }
 
 .iconBtn {
-    background-color: white;
+    background-color: transparent;
     border: none;
     cursor: pointer;
 }
@@ -242,12 +249,12 @@ pre {
     font-size: 16px;
 }
 
-
 .previousChap {
     position: relative;
     float: left;
     padding: 10px;
 }
+
 
 /* Book list page  */
 .bookList {
