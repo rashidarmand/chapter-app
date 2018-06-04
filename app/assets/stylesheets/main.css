@@ -23,7 +23,7 @@ a:hover {
 .logoPic {
     margin: auto;
     width: 60%;
-    padding: 60px 5px;
+    /* padding: 10px 5px; */
 }
 
 .overlay {
@@ -50,14 +50,34 @@ a:hover {
     background-color: #7fb069; 
     border: none;
     color: white;
-    padding: 10px 40px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     border-radius: 16px;
     font-size: 20px;
 }
 
-.button:hover {
+.small_button {
+    background-color: #7fb069; 
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+}
+
+.remove_button {
+    background-color: firebrick; 
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+}
+
+.button:hover, .button2:hover, .small_button:hover, .remove_button:hover {
     background-color: black;
 }
 
@@ -65,16 +85,12 @@ a:hover {
     background-color: #7a7a7a; 
     border: none;
     color: white;
-    padding: 10px 36px;
+    padding: 10px 30px;
     text-align: center;
     text-decoration: none;
     border-radius: 16px;
     font-size: 20px;
     top: 5px;
-}
-
-.button2:hover {
-    background-color: black;
 }
 
 .loginButtons {
@@ -88,12 +104,11 @@ a:hover {
     height: auto;
     padding: 10px;
     margin: 10px;
-    border-style: dotted;
+    border: 1px solid #dadada;
 }
 
 .myBooks {
-    height: 800px;
-    border-style: dotted;
+    height: auto;
     padding: 10px;
     margin: 10px;
 }
@@ -119,7 +134,7 @@ a:hover {
     height: auto;
     padding: 10px;
     margin: 10px;
-    border-style: dotted;
+    border: 1px solid #dadada;
 }
 
 .reco img {
@@ -127,28 +142,87 @@ a:hover {
 }
 
 /* Read page */
-.textBox {
-    background-color: rgb(255, 243, 228);
+#textBox {
+    position: relative;
     width: 80%;
-    height: 800px;
+    height: auto;
     margin: auto;
     padding: 16px;
+    color: inherit;
+    background-color: inherit;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+    color: inherit;
 }
 
 .readSettings {
+    position: relative;
     float: right;
-    background-color: #fffbbd;
-    width: 60px;
-    height: 80px;
+    width: 50px;
+    padding: 5px 15px 0px 0px;
+}
+
+.bookmark {
+    position: relative;
+    float: left;
+    width: 50px;
+    padding: 10px 0px 0px 15px;
+}
+
+.stgIcons {
+    width: 100%;
+}
+
+.stgIcons:hover {
+    text-shadow: 2px 2px 4px #777777;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    padding: 5px;
+}
+
+.iconBtn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.iconBtn:hover {
+    text-shadow: 2px 2px 4px #777777;
+}
+
+.prevChap {
+    position: relative;
+    float: left;
+    padding: 10px;
+}
+
+.nextChap {
+    position: relative;
+    float: right;
+    padding: 10px;
 }
 
 /* Book list page  */
 .bookList {
-    width: 80%;
+    height: auto;
+    margin: auto;
+}
+.mainBookList {
+    width: 70%;
     height: auto;
     margin: auto;
 }
 
-.bookList img {
-    width: 60px;
+.bookList img, .mainBookList img {
+    width: 130px;
+    float: left;
 }

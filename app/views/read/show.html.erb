@@ -1,0 +1,31 @@
+<section id="mainContent">
+
+  
+<div >
+  <div>
+    <div class="text-center mb-4">
+      <%= image_tag @book.image %><br>
+      <strong>Title: </strong> <%= @book.title  %><br>
+      <strong>Author: </strong> <%= @book.author %><br>
+      <strong>Genre: </strong> <%= @book.genre  %><br>
+    </div>
+
+    <div class="d-flex justify-content-center text-center">
+    <div class="col-4">
+      <h3>Chapters</h3>
+      <% @chapters.each do |chapter| %>
+        <%= link_to "Chapter #{chapter.chapter_order}: #{chapter.title}", read_chapter_path(@book.id, chapter.id) %><br>
+      <% end %>
+
+       </div>
+     </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</section>
