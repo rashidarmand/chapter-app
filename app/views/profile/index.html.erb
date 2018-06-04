@@ -40,12 +40,13 @@
             <h2><strong><%= current_user.first_name %>'s Books</h2></strong>
             <div class="bookList">
               <% unless @current_user_books.empty? %>
-              
                 <% @current_user_books.each do |book| %>
                   <div class="row">
+
                     <div class="col-sm-3">
                       <%= image_tag book.image %>
                     </div>
+
                     <div class="col-sm-9">
                       <%= link_to 'Read', read_path(book.id) %><br>
                       <strong>Title: </strong> <%= book.title %></br>
@@ -60,12 +61,13 @@
                       <%= button_to "/user_books/#{book.user_books.first.id}", method: 'delete', :class => 'remove_button' do %>
                         <i class="fas fa-minus-circle"></i> Remove from MyBooks
                       <% end %>
-                      <hr/>
-                    <% end %>
+                    </div>
                   </div>
-                </div>
+                  <br>
+                  <hr/>
+                <% end %>   
             </div>
-            <% else %>
+              <% else %>
 
               <div class="text-center">
                 <p><h3>Your Book List is Empty 😕</h3></p>
