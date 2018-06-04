@@ -39,7 +39,7 @@
 <% end %>
 
 <%# If on the last chapter, show the 'Book Finished' link. Otherwise show 'Next Chapter' link %>
-<% if @chapter == @chapter.book.chapters.last %>
+<% if @chapter == @chapter.book.chapters.last && @user_book.read == false %>
 	<%= form_for @user_book, :url => url_for(:controller => 'user_books', :action => 'update') do |f| %>
     <%= f.hidden_field(:user_id, value: current_user.id) %>
     <%= f.hidden_field(:book_id, value: @chapter.book.id) %>
@@ -49,7 +49,8 @@
       <i class="fas fa-plus-circle"></i> Book Finished
     <% end %>
   <% end %>
- 
+<% elsif @chapter == @chapter.book.chapters.last %> 
+	<%= link_to 'Book Already Completed', root_path, class: 'nextChap' %>
 <% else %>
  <%= link_to 'Next Chapter >', read_chapter_path(@chapter.book.id, @next_chapter.id), class: 'nextChap' %>
 <% end %>
