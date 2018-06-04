@@ -31,12 +31,17 @@
 		<% else %>
 			<pre><%= @chapter.content %></pre></br>
 		<% end %>
+
+
+ <%= button_to 'Done Reading', sign_in_path, method: :get, class:"doneBtn" %>
+
 </center> 
 
  <%#= link_to '< Previous Chapter', read_chapter_path(@chapter.book.id, @previous_chapter.id), class: 'prevChap' %>
 
  <%= link_to 'Next Chapter >', read_chapter_path(@chapter.book.id, @next_chapter.id), class: 'nextChap' %>
 	
+
 
 
 
