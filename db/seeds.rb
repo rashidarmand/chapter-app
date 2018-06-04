@@ -9,16 +9,18 @@
 
 
 
-Book.create(title: "As a Man Thinketh", author: "James Allen", genre: "Self-Help")
-Book.create(title: "Siddhartha", author: "Herman Hesse", genre: "Fiction")
-Book.create(title: "The Republic", author: "Plato", genre: "Philosophy")
-Book.create(title: "Think And Grow Rich", author: "Napoleon HIll", genre: "Self-Help",)
-Book.create(title: "Alice's Adventures In Wonderland", author: "Lewis Carroll", genre: "Fiction")
-Book.create(title: "Art Of War", author: "Sun Tzu", genre: "Self-Help")
-Book.create(title: "Collapsed Ideas: An Inquiry Into Dogmatic Entities", author: "Marc Burock", genre: "Self-Help")
-Book.create(title: "A Book Of Remarkable Criminals", author: "H.B Irving", genre: "Non-Fiction")
-Book.create(title: "The Mysterious Affair At Styles", author: "Agatha Christie", genre: "Crime")
-Book.create(title: "Beyond Good And Evil", author: "Friedrich Nietzsche", genre: "Philosophy")
+Book.create(title: "As a Man Thinketh", author: "James Allen", genre: "Self-Help", image: 'http://books.google.com/books/content?id=I-E-DAAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=none&source=gbs_api
+  ', description: %(First published in 1903, James Allen's 'As a Man Thinketh' has never been out of print and continues to find new legions of fans in the digital age. Described by Allen as "A book that will help you to help yourself," it is in many ways the first self-help book. This new edition of 'As a Man Thinketh' includes Allen's essay 'The Way of Peace.))
+Book.create(title: "Siddhartha", author: "Herman Hesse", genre: "Fiction", image: 'http://books.google.com/books/content?id=126qDgAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=none&source=gbs_api', description: %(Herman Hesse's classic novel has delighted, inspired, and influenced generations of readers, writers, and thinkers. In this story of a wealthy Indian Brahmin who casts off a life of privilege to seek spiritual fulfillment. Hesse synthesizes disparate philosophies--Eastern religions, Jungian archetypes, Western individualism--into a unique vision of life as expressed through one man's search for meaning.))
+Book.create(title: "The Republic", author: "Plato", genre: "Philosophy", image: 'http://books.google.com/books/content?id=v_BpLwLKFPsC&printsec=frontcover&img=1&zoom=3&edge=none&source=gbs_api', description: %(A model for the ideal state includes discussion of the nature and application of justice, the role of the philosopher in society, the goals of education, and the effects of art upon character.))
+Book.create(title: "Think And Grow Rich", author: "Napoleon Hill", genre: "Self-Help", image: 'https://images-na.ssl-images-amazon.com/images/I/51Uw5tYiqsL._SY346_.jpg', description: %(Think and Grow Rich by Napoleon Hill is a timeless classic that has helped individuals from all walks of life to succeed and flourish financially, spiritually, personally and intellectually. Although the first copy of Think and Grow Rich was originally published in 1937, this life-changing information that you are about to read has evolved into one of the best-selling books of all time. This edition is uniquely annotated and indexed. Unlike most other versions, this 2016 special edition restores Napoleon Hill's timeless masterpiece to its original form and intent while offering insight which ties the concepts of the book into today's modern economy. This book is the product of Napoleon Hill spending over two decades working on an assignment given to him by the richest man on earth and famous steel tycoon, Andrew Carnegie. The assignment was to create a philosophy of personal achievement. After interviewing over five hundred successful people, (including Henry Ford, Thomas Edison, Alexander Graham Bell, John D. Rockefeller, George Eastman, William Wrigley Jr. and Charles M. Schwab), Napoleon Hill was finally able to reveal his findings which were brilliantly translated into thirteen steps to success, which has become the blueprint for the better of humanity, teaching the life-transforming secrets on how to Think and Grow Rich.))
+Book.create(title: "Alice's Adventures In Wonderland", author: "Lewis Carroll", genre: "Fiction", image: 'http://books.google.com/books/content?id=n2epCwAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=none&source=gbs_api', description: %(STICKY fingers is all about revealing the intersection of art and language, and no book of literature blends the two quite like Lewis Carroll’s beloved children’s classic, Alice’s Adventures in Wonderland. Follow Alice ‘down the rabbit hole’ as she encounters a hookah-smoking caterpillar, a grinning feline, anthropomorphic playing cards, and a cast of other weird and wonderful characters. This edition celebrates Alice’s spectacular adventures as well as her equally spectacular artistic heritage with a uniquely modern twist: over one hundred whimsical, eccentric and darkly humorous wood engravings by the ‘Mad Hatter’ of Canadian graphic arts himself, the award-winning George A. Walker. Walker’s engravings are as playful, surreal and downright provocative, offering a new and darkly energetic interpretation of Carroll’s masterpiece. An introduction by esteemed author, anthologist and critic Alberto Manguel provides context for the tale, its language, and its unforgettable imagery.))
+Book.create(title: "Art Of War", author: "Sun Tzu", genre: "Self-Help", image: 'http://books.google.com/books/content?id=rV3LDQAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=none&source=gbs_api', description: %(The Art of War is the oldest and most influential military strategy text in existence, and Sun Tzu's teachings on how to successfully respond to and handle situations of conflict is a must-read for for today's business leaders (and politicians, and many others). Whether you approach this reading for its historical significance or choose to apply this knowledge toward achieving success in your own life, you will be enlightened. This elegantly designed clothbound edition features an elastic closure and a new introduction))
+Book.create(title: "Collapsed Ideas: An Inquiry Into Dogmatic Entities", author: "Marc Burock", genre: "Self-Help", image: 'https://www.free-ebooks.net/2d_covers/large/1527081203.jpg', description: %(Most of us think that dogma only applies to religions, and that if you don''t subscribe to a formal religion, then somehow your mind is free and open to the world of rational thought. In Collapsed Ideas, Marc Burock helps you to recognize the variety of dogmatic organisms within yourself and others, providing a first step to freeing yourself from the oppression of worn-out beliefs.  Part philosophy, part self-help, with a bit of horror and humor thrown into the mix))
+Book.create(title: "A Book Of Remarkable Criminals", author: "H.B Irving", genre: "Non-Fiction", image: 'https://images-na.ssl-images-amazon.com/images/I/51lDm%2BCgQEL.jpg', description: %(The silent workings, and still more the explosions, of human passion which bring to light the darker elements of man's nature present to the philosophical observer considerations of intrinsic interest; while to the jurist, the study of human nature and human character with its infinite varieties, especially as affecting the connection between motive and action, between irregular desire or evil disposition and crime itself, is equally indispensable and difficult. - Wills on Circumstantial Evidence. I REMEMBER my father telling me that sitting up late one night talking with Tennyson, the latter remarked that he had not kept such late hours since a recent visit of Jowett. On that occasion the poet and the philosopher had talked together well into the small hours of the morning. My father asked Tennyson what was the subject of conversation that had so engrossed them. "Murders," replied Tennyson. It would have been interesting to have heard Tennyson and Jowett discussing such a theme. The fact is a tribute to the interest that crime has for many men of intellect and imagination. Indeed, how could it be otherwise? Rob history and fiction of crime, how tame and colourless would be the residue! We who are living and enduring in the presence of one of the greatest crimes on record, must realise that trying as this period of the world's history is to those who are passing through it, in the hands of some great historian it may make very good reading forposterity. Perhaps we may find some little consolation in this fact, like the unhappy victims of famous freebooters such as Jack Sheppard or Charley Peace.))
+Book.create(title: "The Mysterious Affair At Styles", author: "Agatha Christie", genre: "Crime", image: 'https://images-na.ssl-images-amazon.com/images/I/513FclB%2BWlL._SX331_BO1,204,203,200_.jpg', description: %(Books for All Kinds of Readers. ReadHowYouWant offers the widest selection of on-demand, accessible format editions on the market today. Our 7 different sizes of EasyRead are optimized by increasing the font size and spacing between the words and the letters. We partner with leading publishers around the globe. Our goal is to have accessible editions simultaneously released with publishers' new books so that all readers can have access to the books they want to read.
+  ))
+Book.create(title: "Beyond Good And Evil", author: "Friedrich Nietzsche", genre: "Philosophy", image: 'http://books.google.com/books/content?id=yas8AAAAYAAJ&printsec=frontcover&img=1&zoom=3&edge=none&source=gbs_api', description: %(In Beyond Good and Evil, Nietzsche accuses past philosophers of lacking critical sense and blindly accepting dogmatic premises in their consideration of morality. Specifically, he accuses them of founding grand metaphysical systems upon the faith that the good man is the opposite of the evil man, rather than just a different expression of the same basic impulses that find more direct expression in the evil man. The work moves into the realm "beyond good and evil" in the sense of leaving behind the traditional morality which Nietzsche subjects to a destructive critique in favour of what he regards as an affirmative approach that fearlessly confronts the perspectival nature of knowledge and the perilous condition of the modern individual.))
 
 
 Chapter.create(title:"Thought And Character",
@@ -11723,22 +11725,22 @@ THE house which the Belgians occupied in the village was quite close to the park
   He accosted me eagerly.	 
   "My God! This is terrible! My poor wife! I have only just heard."	 
   "Where have you been?" I asked.	 
-  "Denby kept me late last night. It was one o'clock before we'd finished. Then I found that I'd forgotten the latch-key after all. I didn't want to arouse the household, so Denby gave me a bed."	   5
+  "Denby kept me late last night. It was one o'clock before we'd finished. Then I found that I'd forgotten the latch-key after all. I didn't want to arouse the household, so Denby gave me a bed."	   
   "How did you hear the news?" I asked.	 
   "Wilkins knocked Denby up to tell him. My poor Emily! She was so self-sacrificing-such a noble character. She overtaxed her strength."	 
   A wave of revulsion swept over me. What a consummate hypocrite the man was!	 
   "I must hurry on," I said, thankful that he did not ask me whither I was bound.	 
-  In a few minutes I was knocking at the door of Leastways Cottage.	10
+  In a few minutes I was knocking at the door of Leastways Cottage.	
   Getting no answer, I repeated my summons impatiently. A window above me was cautiously opened, and Poirot himself looked out.	 
   He gave an exclamation of surprise at seeing me. In a few brief words, I explained the tragedy that had occurred, and that I wanted his help.	 
   "Wait, my friend, I will let you in, and you shall recount to me the affair whilst I dress."	 
   In a few moments he had unbarred the door, and I followed him up to his room. There he installed me in a chair, and I related the whole story, keeping back nothing, and omitting no circumstance, however insignificant, whilst he himself made a careful and deliberate toilet.	 
-  I told him of my awakening, of Mrs. Inglethorp's dying words, of her husband's absence, of the quarrel the day before, of the scrap of conversation between Mary and her mother-in-law that I had overheard, of the former quarrel between Mrs. Inglethorp and Evelyn Howard, and of the latter's inuendoes.	15
+  I told him of my awakening, of Mrs. Inglethorp's dying words, of her husband's absence, of the quarrel the day before, of the scrap of conversation between Mary and her mother-in-law that I had overheard, of the former quarrel between Mrs. Inglethorp and Evelyn Howard, and of the latter's inuendoes.	
   I was hardly as clear as I could wish. I repeated myself several times, and occasionally had to go back to some detail that I had forgotten. Poirot smiled kindly on me.	 
   "The mind is confused? Is it not so? Take time, mon ami. You are agitated; you are excited-it is but natural. Presently, when we are calmer, we will arrange the facts, neatly, each in his proper place. We will examine-and reject. Those of importance we will put on one side; those of no importance, pouf!"-he screwed up his cherub-like face, and puffed comically enough-"blow them away!"	 
   "That's all very well," I objected, "but how are you going to decide what is important, and what isn't. That always seems the difficulty to me."	 
   Poirot shook his head energetically. He was now arranging his moustache with exquisite care.	 
-  "Not so. Voyons! One fact leads to another-so we continue. Does the next fit in with that? A merveille! Good! We can proceed. This next little fact-no! Ah, that is curious! There is something missing-a link in the chain that is not there. We examine. We search. And that little curious fact, that possibly paltry little detail that will not tally, we put it here!" He made an extravagant gesture with his hand. "It is significant! It is tremendous!"	20
+  "Not so. Voyons! One fact leads to another-so we continue. Does the next fit in with that? A merveille! Good! We can proceed. This next little fact-no! Ah, that is curious! There is something missing-a link in the chain that is not there. We examine. We search. And that little curious fact, that possibly paltry little detail that will not tally, we put it here!" He made an extravagant gesture with his hand. "It is significant! It is tremendous!"	
   "Y-es-"	 
   "Ah!" Poirot shook his forefinger so fiercely at me that I quailed before it. "Beware! Peril to the detective who says: 'It is so small-it does not matter. It will not agree. I will forget it.' That way lies confusion! Everything matters."	 
   "I know. You always told me that. That's why I have gone into all the details of this thing whether they seemed to me relevant or not."	 
@@ -11748,37 +11750,37 @@ THE house which the Belgians occupied in the village was quite close to the park
   I stared at him. Surely the war had affected the little man's brain. He was carefully engaged in brushing his coat before putting it on, and seemed wholly engrossed in the task.	 
   "I don't remember," I said. "And, anyway, I don't see--"	 
   "You do not see? But it is of the first importance."	 
-  "I can't see why," I said, rather nettled. "As far as I can remember, she didn't eat much. She was obviously upset, and it had taken her appetite away. That was only natural."	30
+  "I can't see why," I said, rather nettled. "As far as I can remember, she didn't eat much. She was obviously upset, and it had taken her appetite away. That was only natural."	
   "Yes," said Poirot thoughtfully, "it was only natural."	 
   He opened a drawer, and took out a small despatch-case, then turned to me.	 
   "Now I am ready. We will proceed to the château, and study matters on the spot. Excuse me, mon ami, you dressed in haste, and your tie is on one side. Permit me." With a deft gesture, he rearranged it.	 
   "Ça y est! Now, shall we start?"	 
-  We hurried up the village, and turned in at the lodge gates. Poirot stopped for a moment, and gazed sorrowfully over the beautiful expanse of park, still glittering with morning dew.	35
+  We hurried up the village, and turned in at the lodge gates. Poirot stopped for a moment, and gazed sorrowfully over the beautiful expanse of park, still glittering with morning dew.	
   "So beautiful, so beautiful, and yet, the poor family, plunged in sorrow, prostrated with grief."	 
   He looked at me keenly as he spoke, and I was aware that I reddened under his prolonged gaze.	 
   Was the family prostrated by grief? Was the sorrow at Mrs. Inglethorp's death so great? I realized that there was an emotional lack in the atmosphere. The dead woman had not the gift of commanding love. Her death was a shock and a distress, but she would not be passionately regretted.	 
   Poirot seemed to follow my thoughts. He nodded his head gravely.	 
-  "No, you are right," he said, "it is not as though there was a blood tie. She has been kind and generous to these Cavendishes, but she was not their own mother. Blood tells-always remember that-blood tells."	40
+  "No, you are right," he said, "it is not as though there was a blood tie. She has been kind and generous to these Cavendishes, but she was not their own mother. Blood tells-always remember that-blood tells."	
   "Poirot," I said, "I wish you would tell me why you wanted to know if Mrs. Inglethorp ate well last night? I have been turning it over in my mind, but I can't see how it has anything to do with the matter."	 
   He was silent for a minute or two as we walked along, but finally he said:	 
   "I do not mind telling you-though, as you know, it is not my habit to explain until the end is reached. The present contention is that Mrs. Inglethorp died of strychnine poisoning, presumably administered in her coffee."	 
   "Yes?"	 
-  "Well, what time was the coffee served?"	45
+  "Well, what time was the coffee served?"	
   "About eight o'clock."	 
   "Therefore she drank it between then and half-past eight-certainly not much later. Well, strychnine is a fairly rapid poison. Its effects would be felt very soon, probably in about an hour. Yet, in Mrs. Inglethorp's case, the symptoms do not manifest themselves until five o'clock the next morning: nine hours! But a heavy meal, taken at about the same time as the poison, might retard its effects, though hardly to that extent. Still, it is a possibility to be taken into account. But, according to you, she ate very little for supper, and yet the symptoms do not develop until early the next morning! Now that is a curious circumstance, my friend. Something may arise at the autopsy to explain it. In the meantime, remember it."	 
   As we neared the house, John came out and met us. His face looked weary and haggard.	 
   "This is a very dreadful business, Monsieur Poirot," he said. "Hastings has explained to you that we are anxious for no publicity?"	 
-  "I comprehend perfectly."	50
+  "I comprehend perfectly."	
   "You see, it is only suspicion so far. We have nothing to go upon."	 
   "Precisely. It is a matter of precaution only."	 
   John turned to me, taking out his cigarette-case, and lighting a cigarette as he did so.	 
   "You know that fellow Inglethorp is back?"	 
-  "Yes. I met him."	55
+  "Yes. I met him."	
   John flung the match into an adjacent flower bed, a proceeding which was too much for Poirot's feelings. He retrieved it, and buried it neatly.	 
   "It's jolly difficult to know how to treat him."	 
   "That difficulty will not exist long," pronounced Poirot quietly.	 
   John looked puzzled, not quite understanding the portent of this cryptic saying. He handed the two keys which Dr. Bauerstein had given him to me.	 
-  "Show Monsieur Poirot everything he wants to see."	60
+  "Show Monsieur Poirot everything he wants to see."	
   "The rooms are locked?" asked Poirot.	 
   "Dr. Bauerstein considered it advisable."	 
   Poirot nodded thoughtfully.	 
@@ -11789,32 +11791,32 @@ THE house which the Belgians occupied in the village was quite close to the park
   "What have you, my friend?" he cried, "that you remain there like-how do you say it?-ah, yes, the stuck pig?"	 
   I explained that I was afraid of obliterating any foot-marks.	 
   "Foot-marks? But what an idea! There has already been practically an army in the room! What foot-marks are we likely to find? No, come here and aid me in my search. I will put down my little case until I need it."	 
-  He did so, on the round table by the window, but it was an ill-advised proceeding; for, the top of it being loose, it tilted up, and precipitated the despatch-case on to the floor.	70
+  He did so, on the round table by the window, but it was an ill-advised proceeding; for, the top of it being loose, it tilted up, and precipitated the despatch-case on to the floor.	
   "En voilà une table!" cried Poirot. "Ah, my friend, one may live in a big house and yet have no comfort."	 
   After which piece of moralizing, he resumed his search.	 
   A small purple despatch-case, with a key in the lock, on the writing-table, engaged his attention for some time. He took out the key from the lock, and passed it to me to inspect. I saw nothing peculiar, however. It was an ordinary key of the Yale type, with a bit of twisted wire through the handle.	 
   Next, he examined the framework of the door we had broken in, assuring himself that the bolt had really been shot. Then he went to the door opposite leading into Cynthia's room. That door was also bolted, as I had stated. However, he went to the length of unbolting it, and opening and shutting it several times; this he did with the utmost precaution against making any noise. Suddenly something in the bolt itself seemed to rivet his attention. He examined it carefully, and then, nimbly whipping out a pair of small forceps from his case, he drew out some minute particle which he carefully sealed up in a tiny envelope.	 
-  On the chest of drawers there was a tray with a spirit lamp and a small saucepan on it. A small quantity of a dark fluid remained in the saucepan, and an empty cup and saucer that had been drunk out of stood near it.	75
+  On the chest of drawers there was a tray with a spirit lamp and a small saucepan on it. A small quantity of a dark fluid remained in the saucepan, and an empty cup and saucer that had been drunk out of stood near it.	
   I wondered how I could have been so unobservant as to overlook this. Here was a clue worth having. Poirot delicately dipped his finger into the liquid, and tasted it gingerly. He made a grimace.	 
   "Coco-with-I think-rum in it."	 
   He passed on to the debris on the floor, where the table by the bed had been overturned. A reading-lamp, some books, matches, a bunch of keys, and the crushed fragments of a coffee-cup lay scattered about.	 
   "Ah, this is curious," said Poirot.	 
-  "I must confess that I see nothing particularly curious about it."	80
+  "I must confess that I see nothing particularly curious about it."	
   "You do not? Observe the lamp-the chimney is broken in two places; they lie there as they fell. But see, the coffee-cup is absolutely smashed to powder."	 
   "Well," I said wearily, "I suppose some one must have stepped on it."	 
   "Exactly," said Poirot, in an odd voice. "Some one stepped on it."	 
   He rose from his knees, and walked slowly across to the mantelpiece, where he stood abstractedly fingering the ornaments, and straightening them-a trick of his when he was agitated.	 
-  "Mon ami," he said, turning to me, "somebody stepped on that cup, grinding it to powder, and the reason they did so was either because it contained strychnine or-which is far more serious-because it did not contain strychnine!"	85
+  "Mon ami," he said, turning to me, "somebody stepped on that cup, grinding it to powder, and the reason they did so was either because it contained strychnine or-which is far more serious-because it did not contain strychnine!"	
   I made no reply. I was bewildered, but I knew that it was no good asking him to explain. In a moment or two he roused himself, and went on with his investigations. He picked up the bunch of keys from the floor, and twirling them round in his fingers finally selected one, very bright and shining, which he tried in the lock of the purple despatch-case. It fitted, and he opened the box, but after a moment's hesitation, closed and relocked it, and slipped the bunch of keys, as well as the key that had originally stood in the lock, into his own pocket.	 
   "I have no authority to go through these papers. But it should be done-at once!"	 
   He then made a very careful examination of the drawers of the wash-stand. Crossing the room to the left-hand window, a round stain, hardly visible on the dark brown carpet, seemed to interest him particularly. He went down on his knees, examining it minutely-even going so far as to smell it.	 
   Finally, he poured a few drops of the coco into a test tube, sealing it up carefully. His next proceeding was to take out a little notebook.	 
-  "We have found in this room," he said, writing busily, "six points of interest. Shall I enumerate them, or will you?"	90
+  "We have found in this room," he said, writing busily, "six points of interest. Shall I enumerate them, or will you?"	
   "Oh, you," I replied hastily.	 
   "Very well, then. One, a coffee-cup that has been ground into powder; two, a despatch-case with a key in the lock; three, a stain on the floor."	 
   "That may have been done some time ago," I interrupted.	 
   "No, for it is still perceptibly damp and smells of coffee. Four, a fragment of some dark green fabric-only a thread or two, but recognizable."	 
-  "Ah!" I cried. "That was what you sealed up in the envelope."	95
+  "Ah!" I cried. "That was what you sealed up in the envelope."	
   "Yes. It may turn out to be a piece of one of Mrs. Inglethorp's own dresses, and quite unimportant. We shall see. Five, this!" With a dramatic gesture, he pointed to a large splash of candle grease on the floor by the writing-table. "It must have been done since yesterday, otherwise a good housemaid would have at once removed it with blotting-paper and a hot iron. One of my best hats once-but that is not to the point."	 
   "It was very likely done last night. We were very agitated. Or perhaps Mrs. Inglethorp herself dropped her candle."	 
   "You brought only one candle into the room?"	 

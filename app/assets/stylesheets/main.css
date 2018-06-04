@@ -163,15 +163,52 @@ pre {
     position: relative;
     float: right;
     width: 50px;
-    padding: 5px;
+    padding: 5px 15px 0px 0px;
+}
+
+.bookmark {
+    position: relative;
+    float: left;
+    width: 50px;
+    padding: 10px 0px 0px 15px;
 }
 
 .stgIcons {
     width: 100%;
 }
 
+.stgIcons:hover {
+    text-shadow: 2px 2px 4px #777777;
+}
+
+.pagination {
+    display: inline-block;
+}
+
 .pagination a {
     padding: 5px;
+}
+
+.iconBtn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.iconBtn:hover {
+    text-shadow: 2px 2px 4px #777777;
+}
+
+.prevChap {
+    position: relative;
+    float: left;
+    padding: 10px;
+}
+
+.nextChap {
+    position: relative;
+    float: right;
+    padding: 10px;
 }
 
 /* Book list page  */

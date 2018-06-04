@@ -6,24 +6,37 @@
     <h1><strong>Available Books</h1></strong>
     <% @books.each do |book| %>
       <p class='d-flex align-content-center flex-wrap'>
-        <p><%= image_tag 'bookicon.jpg' %></p>
-        <p>
-          <strong>Title: </strong> <%= book.title %> </br>
-          <strong>Author: </strong> <%= book.author %></br>
-          <strong>Genre: </strong> <%= book.genre %></br>
-          <%= link_to 'Read', read_path(book.id) %>
-          <% unless current_user.books.include?(book) %>
-            <%= form_for @user_book, :url => url_for(:controller => 'user_books', :action => 'create') do |f| %>
-              <%= f.hidden_field(:user_id, value: current_user.id) %>
-              <%= f.hidden_field(:book_id, value: book.id) %>
-              <%= f.hidden_field(:read, value: false) %>
-              <%= f.hidden_field(:priority, value: nil) %>
-              <%= button_tag( :class => "small_button") do %>
-                <i class="fas fa-plus-circle"></i> Add To myBooks
+        <div class="row">
+          <div class="col-sm-2">
+            <p><%= image_tag book.image %></p>
+          </div>
+          <div class="col-sm-10">
+            <p>
+              <%= link_to 'Read', read_path(book.id) %><br>
+              <strong>Title: </strong> <%= book.title %> </br>
+              <strong>Author: </strong> <%= book.author %></br>
+              <strong>Genre: </strong> <%= book.genre %>
+              <details>
+                <strong><summary>Description: </summary></strong>
+                <p>
+                  <%= book.description %>
+                </p>
+              </details><br>
+              <% unless current_user.books.include?(book) %>
+                <%= form_for @user_book, :url => url_for(:controller => 'user_books', :action => 'create') do |f| %>
+                  <%= f.hidden_field(:user_id, value: current_user.id) %>
+                  <%= f.hidden_field(:book_id, value: book.id) %>
+                  <%= f.hidden_field(:read, value: false) %>
+                  <%= f.hidden_field(:priority, value: nil) %>
+                  <%= button_tag( :class => "small_button") do %>
+                    <i class="fas fa-plus-circle"></i> Add To myBooks
+                  <% end %>
+                <% end %>
               <% end %>
-            <% end %>
-          <% end %>
-        </p>
+            </p>
+          </div>
+        </div>
+        
         <br>
         <hr/>
       </p>

@@ -8,9 +8,6 @@ class Chapter < ApplicationRecord
   validates :content, presence: true
   validates :book_id, presence: true
 
-  def exceed_200_words?
-    
-  end
   
   # Check if chapter has more than 250 words in it
   def long_chapter?
