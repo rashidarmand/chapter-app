@@ -14,11 +14,19 @@ class User < ApplicationRecord
   end
 
   def books_read
+    if self.books.length==0
+      return 0
+    else
     self.books.where("read = true").count
-  end
+    end
+ end
 
   def chapters_read
+    if self.chapters.length==0
+      return 0
+    else
     self.chapters.where("read = true").count
+    end
   end
 
 end
