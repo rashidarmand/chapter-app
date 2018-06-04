@@ -1,24 +1,164 @@
-<h1>Update your profile</h1>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <%= form_for(users_path) do |f| %>
+</head>
+      <br>
+    <br>
+  <br>
+<br>
+<center>
+  <strong>
+      <h1>Account Setting</h1>
+    </strong>
+  </center>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+<center class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-lg-5">
+      <br>
+        <br>
+          <br>
+        <br>
 
-      <%= f.label :email_confirmation, "Confirm Your Email" %>
-      <%= f.email_field :email_confirmation, class: 'form-control' %>
+  <strong><h4>Full Name:  </strong> <%= current_user.full_name %></h4>
+    <br>
+    <strong><h4>Email:  </strong><%= current_user.email %> </h4>
+  <br> <%= current_user.time_preference%>
+<br>
 
-        <%= f.submit "Submit", class: "btn btn-primary" %>
-    <% end %>
+<%= form_with url: update_user_path(current_user), method: :put, local: true do |form| %>
+  <h4>
+    <strong>
+  <%= form.label :time_preference, "Time Preference" %>
+    </h4>
+      </strong>
+    <%= form.select :time_preference, options_for_select([
+  ["12:00 am", 0],
+  ["12:15 am", 15],
+  ["12:30 am", 30],
+  ["12:45 am", 45],
+  ["1:00 am", 60],
+  ["1:15 am", 75],
+  ["1:30 am", 90],
+  ["1:45 am", 105],
+  ["2:00 am", 120],
+  ["2:15 am", 135],
+  ["2:30 am", 150],
+  ["2:45 am", 165],
+  ["3:00 am", 180],
+  ["3:15 am", 195],
+  ["3:30 am", 210],
+  ["3:45 am", 225],
+  ["4:00 am", 240],
+  ["4:15 am", 255],
+  ["4:30 am", 270],
+  ["4:45 am", 285],
+  ["5:00 am", 300],
+  ["5:15 am", 315],
+  ["5:30 am", 330],
+  ["5:45 am", 345],
+  ["6:00 am", 360],
+  ["6:15 am", 375],
+  ["6:30 am", 390],
+  ["6:45 am", 405],
+  ["7:00 am", 420],
+  ["7:15 am", 435],
+  ["7:30 am", 450],
+  ["7:45 am", 465],
+  ["8:00 am", 480],
+  ["8:15 am", 495],
+  ["8:30 am", 510],
+  ["8:45 am", 525],
+  ["9:00 am", 540],
+  ["9:15 am", 555],
+  ["9:30 am", 570],
+  ["9:45 am", 585],
+  ["10:00 am", 600],
+  ["10:15 am", 615],
+  ["10:30 am", 630],
+  ["10:45 am", 645],
+  ["11:00 am", 660],
+  ["11:15 am", 675],
+  ["11:30 am", 690],
+  ["11:45 am", 705],
+  ["12:00 pm", 720],
+  ["12:15 pm", 735],
+  ["12:30 pm", 750],
+  ["12:45 pm", 765],
+  ["1:00 pm", 780],
+  ["1:15 pm",795],
+  ["1:30 pm", 810],
+  ["1:45 pm", 825],
+  ["2:00 pm", 840],
+  ["2:15 pm", 855],
+  ["2:30 pm", 870],
+  ["2:45 pm", 885],
+  ["3:00 pm", 900],
+  ["3:15 pm", 915],
+  ["3:30 pm", 930],
+  ["3:45 pm", 945],
+  ["4:00 pm", 960],
+  ["4:15 pm", 975],
+  ["4:30 pm", 990],
+  ["4:45 pm", 1005],
+  ["5:00 pm", 1020],
+  ["5:15 pm", 1035],
+  ["5:30 pm", 1050],
+  ["5:45 pm", 1065],
+  ["6:00 pm", 1080],
+  ["6:15 pm", 1095],
+  ["6:30 pm", 1110],
+  ["6:45 pm", 1125],
+  ["7:00 pm", 1140],
+  ["7:15 pm", 1155],
+  ["7:30 pm", 1170],
+  ["7:45 pm", 1185],
+  ["8:00 pm", 1200],
+  ["8:15 pm", 1215],
+  ["8:30 pm", 1230],
+  ["8:45 pm", 1245],
+  ["9:00 pm", 1260],
+  ["9:15 pm", 1275],
+  ["9:30 pm", 1290],
+  ["9:45 pm", 1305],
+  ["10:00 pm", 1320],
+  ["10:15 pm", 1335],
+  ["10:30 pm", 1350],
+  ["10:45 pm", 1365],
+  ["11:00 pm", 1380],
+  ["11:15 pm", 1395],
+  ["11:30 pm", 1410],
+  ["11:45 pm", 1425]
+].map {|times| [times[0],times[1]]}, :selected => params[:user]), {}, { :class => 'span3 controls controls-row' } %>
+    <%= form.submit "Submit", class: "button" %>
 
-        <%= form_for(users_path) do |f| %>
+  <% end %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-      
+  </container>    
+</div>
+    <div class="col col-lg-6">
+    <br>
+      <br>
+        <br>
+          <h2>Update Your Password</h2>
+          <br>
+        <h5>
+      <%= form_with url: user_password_path(current_user), method: :patch, local: true do |form| %>
+        <%= form.label :password, "Enter Your New Password" %>
+        <%= form.password_field :password, class: 'form-control' %>
+        <%= form.label :password_confirmation, "Confirm your Password" %>
+        <%= form.password_field :password_confirmation, class: 'form-control' %>
+      <br>
+      </h5>
+        <%= form.submit "Submit", class: "button" %>
+          <% end %>    
+        </div>
+  </center>
 
-      <%= f.label :password_confirmation, "Confirm your Password" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Submit", class: "btn btn-primary" %>
-    <% end %>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+
