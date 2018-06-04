@@ -177,6 +177,14 @@ pre {
     width: 100%;
 }
 
+.stgIcons:hover {
+    text-shadow: 2px 2px 4px #777777;
+}
+
+.pagination {
+    display: inline-block;
+}
+
 .pagination a {
     padding: 5px;
 }
@@ -184,12 +192,24 @@ pre {
 .iconBtn {
     background-color: white;
     border: none;
+    cursor: pointer;
 }
 
 .iconBtn:hover {
-    background-color: #7fb069;
+    text-shadow: 2px 2px 4px #777777;
 }
 
+.prevChap {
+    position: relative;
+    float: left;
+    padding: 10px;
+}
+
+.nextChap {
+    position: relative;
+    float: right;
+    padding: 10px;
+}
 
 /* Book list page  */
 .bookList {

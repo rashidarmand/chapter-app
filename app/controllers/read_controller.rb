@@ -1,6 +1,5 @@
 class ReadController < ApplicationController
   def index
-    # @book = Book.find(params[:id])
   end
 
   def show
@@ -11,5 +10,15 @@ class ReadController < ApplicationController
   def chapter
     @chapter = Chapter.find(params[:chapter_id])
     @chunk_of_chapter = @chapter.broken_up_chapters.paginate(:page => params[:page], :per_page => 1)
+   
+    if Chapter.find(@chapter.id + 1).book_id == @chapter.book_id 
+      @next_chapter = Chapter.find(@chapter.id + 1)
+    end
+    # if Chapter.find(@chapter.id - 1).book_id == @chapter.book_id
+    #   if @chapter.id != 1 
+    #     @previous_chapter = Chapter.find(@chapter.id - 1)
+    #   end
+    # end
+
   end
 end
