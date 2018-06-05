@@ -6,7 +6,7 @@
 
           <div class="d-flex">
             <div class="bookStatus">
-            <p><strong>Hi <%= current_user.first_name %> ! 👋</p></strong>
+            <p><strong>Hi <%= current_user.first_name.capitalize %> ! 👋</p></strong>
             <div class="bookImg" id="user-rank-image"><%= 
             if current_user.books_read < 4
             image_tag 'caterpillar.png'
@@ -25,7 +25,7 @@
               <strong>Status:</strong> <span id="user-rank"></span></br>
               <strong class="book-progress-bar">Progress bar:</strong></br>
               <div class="progress book-progress-bar">
-                <div class="progress-bar book-progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:<%=(((current_user.books_read.to_i*10)%4)+5).to_s%>%"></div>
+                <div class="progress-bar book-progress-bar" id="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:5%"></div>
               </div>
             </div>
             
@@ -45,7 +45,7 @@
         <div class="col-sm-8">
           <div class="myBooks">
             <p id="notice"><%= notice %></p>
-            <h2><strong><%= current_user.first_name %>'s Books</h2></strong>
+            <h2><strong><%= current_user.first_name.capitalize %>'s Books</h2></strong>
             <div class="bookList">
               <% unless @current_user_books.empty? %>
                 <% @current_user_books.each do |book| %>
