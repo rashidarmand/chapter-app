@@ -10,9 +10,9 @@
             <div class="bookImg" id="user-rank-image"><%= 
             if current_user.books_read < 4
             image_tag 'caterpillar.png'
-            elsif current_user.books_read > 4 && current_user.books_read < 8
+            elsif current_user.books_read > 3 && current_user.books_read < 8
             image_tag 'cocoon.png'
-            elsif current_user.books_read > 7
+            elsif current_user.books_read >= 7
             image_tag 'butterfly.png'
             end
             %></div>
