@@ -32,9 +32,11 @@ class UserBooksController < ApplicationController
   end
 
   def update
+    @user_book = UserBook.find_by(user_book_params.values)
+    # @user_book = UserBook.find(params[:id])
     respond_to do |format|
       if @user_book.update(user_book_params)
-        format.html { redirect_to profile_path, notice: 'Book completed!' }
+        format.html { redirect_to profile_index_path, notice: 'Book Completed!' }
         format.json { render :show, status: :created, location: books_path }
       else
         format.html { render :new }
@@ -46,7 +48,7 @@ class UserBooksController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_user_book
-    @user_book = UserBook.find(params[:id])
+    # @user_book = UserBook.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

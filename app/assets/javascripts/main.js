@@ -1,25 +1,35 @@
 // Reader Settings
 // event listener to refresh turbolinks
+
 document.addEventListener("turbolinks:load", function(){
 
     // sepia setting
     $(document).ready(function(){
         $("#sepia").click(function(){
-            $("#textBox").css({"background-color": "#d8d6bf", "color": "#000"});
+            $("#readPage").css({"background-color": "#d8d6bf", "color": "#000"});
+            $(".fas.fa-search-plus").css({"color": "#000"});
+            $(".fas.fa-search-minus").css({"color": "#000"});
+            $(".far.fa-bookmark").css({"color": "#000"});
         });
     });
     
     // black setting
     $(document).ready(function(){
         $("#black").click(function(){
-            $("#textBox").css({"background-color": "#000", "color": "#fff"});
+            $("#readPage").css({"background-color": "#000", "color": "#fff"});
+            $(".fas.fa-search-plus").css({"color": "#fff"});
+            $(".fas.fa-search-minus").css({"color": "#fff"});
+            $(".far.fa-bookmark").css({"color": "#fff"});
         });
     });
     
     // white setting
     $(document).ready(function(){
         $("#white").click(function(){
-            $("#textBox").css({"background-color": "#fff", "color": "#000"});
+            $("#readPage").css({"background-color": "#fff", "color": "#000"});
+            $(".fas.fa-search-plus").css({"color": "#000"});
+            $(".fas.fa-search-minus").css({"color": "#000"});
+            $(".far.fa-bookmark").css({"color": "#000"});
         });
     });
 
@@ -54,10 +64,21 @@ document.addEventListener("turbolinks:load", function(){
 })
 
 
-
-
-
-
-
-
+function bookProgress(){
+    booksRead = parseInt(document.getElementById("books-read").innerHTML);
+    userRank = document.getElementById("user-rank");
+    if(booksRead < 4){
+        userRank.innerHTML = "Caterpillar";
+    }
+    else if (booksRead > 4 && booksRead < 8){
+        userRank.innerHTML = "Cocoon";
+    }
+    else if (booksRead > 7){
+        userRank.innerHTML = "Butterfly"
+      elements = document.getElementsByClassName("book-progress-bar");
+      for(let i = 0; i < elements.length; i++){
+          elements[i].classList.add("hidden");
+      }
+    }  
+}
 

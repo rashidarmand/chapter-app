@@ -6,6 +6,6 @@
   <body>
     <h1>Hi <%= @user.first_name %></h1>
     <p> <%="This is your next chapter #{@user.first_name}"%></p>
-    <p> <%= Chapter.find(Book.find(UserBook.find_by(user_id: user.id).book_id).chapter_ids.first).content%></p>
+    <p> <%= Chapter.find(Book.find(UserBook.find_by(user_id: @user.id).book_id).chapter_ids.first).content%></p>
   </body>
 </html>

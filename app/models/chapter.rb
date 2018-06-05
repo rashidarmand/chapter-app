@@ -20,7 +20,7 @@ class Chapter < ApplicationRecord
 
   # Breaks down chapter into an array of arrays. The inner arrays have at most 250 words.
   def broken_up_chapters
-    content_array = self.content.split(' ')
+    content_array = self.content.split()
     small_chunks_array = []
     
     while content_array.length > 250 do
