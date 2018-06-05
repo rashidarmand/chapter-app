@@ -275,7 +275,12 @@ pre {
 
 .col-sm-2 {
     padding: 10px;
+<<<<<<< HEAD
 
 .hidden {
+=======
+}
+.hidden{
+>>>>>>> 353cf81c6f86fc9951cbebc3c0ac64cf2eba7a61
     visibility: hidden;
 }

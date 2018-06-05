@@ -21,6 +21,19 @@
         <%= form.password_field :password, class:"form-control", placeholder:"Password", :required => true %>
       </div>
 
+      <div>
+      <strong>
+  <%= form.label :time_preference, "Time Preference" %>
+    </h4>
+      </strong>
+    <%= form.select :time_preference, options_for_select([
+
+  ["Morning", 480],
+  ["Noon", 720],
+  ["Afternoon", 1050],
+  ["Evening", 1170]
+].map {|times| [times[0],times[1]]}, :selected => params[:user]), {}, { :class => 'span3 controls controls-row' } %>
+      </div>
       <br>
 
 

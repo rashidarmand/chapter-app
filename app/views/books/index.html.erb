@@ -1,4 +1,6 @@
 <section id="mainContent">
+
+<h1>Books</h1>
   <p id="notice"><%= notice %></p>
   <div class="mainBookList">
     <h1><strong>Available Books</h1></strong>
@@ -10,7 +12,7 @@
           </div>
           <div class="col-sm-10">
             <p>
-              <%= link_to 'Read', read_path(book.id) %><br>
+              
               <strong>Title: </strong> <%= book.title %> </br>
               <strong>Author: </strong> <%= book.author %></br>
               <strong>Genre: </strong> <%= book.genre %>
@@ -41,4 +43,4 @@
     <% end %>
   </div>
 
-</section>
+
