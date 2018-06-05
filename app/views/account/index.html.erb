@@ -23,13 +23,13 @@
   <strong><h4>Full Name:  </strong> <%= current_user.full_name %></h4>
     <br>
     <strong><h4>Email:  </strong><%= current_user.email %> </h4>
-  <br> <%= current_user.time_preference%>
+  <br> 
 <br>
 
 <%= form_with url: update_user_path(current_user), method: :put, local: true do |form| %>
   <h4>
     <strong>
-  <%= form.label :time_preference, "Time Preference" %>
+  <%= form.label :time_preference, "Update Time Preference" %>
     </h4>
       </strong>
     <%= form.select :time_preference, options_for_select([
@@ -143,7 +143,7 @@
           <h2>Update Your Password</h2>
           <br>
         <h5>
-      <%= form_with url: user_password_path(current_user), method: :patch, local: true do |form| %>
+        <%= form_with url: update_user_path(current_user), method: :put, local: true do |form| %>
         <%= form.label :password, "Enter Your New Password" %>
         <%= form.password_field :password, class: 'form-control' %>
         <%= form.label :password_confirmation, "Confirm your Password" %>
