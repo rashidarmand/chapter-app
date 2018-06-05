@@ -14,12 +14,12 @@
               <strong>Title: </strong> <%= book.title %> </br>
               <strong>Author: </strong> <%= book.author %></br>
               <strong>Genre: </strong> <%= book.genre %>
-              <details>
-                <strong><summary>Description: </summary></strong>
-                <p>
+             <br>
+                <strong>Description: </strong>
+                
                   <%= book.description %>
-                </p>
-              </details><br>
+                
+              <br>
               <% unless current_user.books.include?(book) %>
                 <%= form_for @user_book, :url => url_for(:controller => 'user_books', :action => 'create') do |f| %>
                   <%= f.hidden_field(:user_id, value: current_user.id) %>

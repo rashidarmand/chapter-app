@@ -7,6 +7,7 @@ document.addEventListener("turbolinks:load", function(){
     $(document).ready(function(){
         $("#sepia").click(function(){
             $("#readPage").css({"background-color": "#d8d6bf", "color": "#000"});
+            $("html").css({"background-color": "#d8d6bf", "color": "#000"});
             $(".fas.fa-search-plus").css({"color": "#000"});
             $(".fas.fa-search-minus").css({"color": "#000"});
             $(".far.fa-bookmark").css({"color": "#000"});
@@ -17,6 +18,7 @@ document.addEventListener("turbolinks:load", function(){
     $(document).ready(function(){
         $("#black").click(function(){
             $("#readPage").css({"background-color": "#000", "color": "#fff"});
+            $("html").css({"background-color": "#000", "color": "#fff"});
             $(".fas.fa-search-plus").css({"color": "#fff"});
             $(".fas.fa-search-minus").css({"color": "#fff"});
             $(".far.fa-bookmark").css({"color": "#fff"});
@@ -27,6 +29,7 @@ document.addEventListener("turbolinks:load", function(){
     $(document).ready(function(){
         $("#white").click(function(){
             $("#readPage").css({"background-color": "#fff", "color": "#000"});
+            $("html").css({"background-color": "#fff", "color": "#000"});
             $(".fas.fa-search-plus").css({"color": "#000"});
             $(".fas.fa-search-minus").css({"color": "#000"});
             $(".far.fa-bookmark").css({"color": "#000"});
