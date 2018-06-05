@@ -29,10 +29,16 @@ class Clearance::UsersController < ApplicationController
 
   end
 
+
   def update
     @user = User.find(params[:id])
-    @user.update(permit_params)
+    if @user.update(permit_params)
+      flash[:notice] = "Profile updated"
     redirect_to account_index_path
+    else
+      flash[:notice] = "Unable to Update Profile updated"
+      redirect_to account_index_path
+    end
   end
 
   private
