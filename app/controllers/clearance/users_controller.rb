@@ -29,6 +29,12 @@ class Clearance::UsersController < ApplicationController
 
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.update(permit_params)
+    redirect_to account_index_path
+  end
+
   private
 
   def avoid_sign_in
@@ -54,12 +60,14 @@ class Clearance::UsersController < ApplicationController
     last_name = user_params.delete(:last_name)
     email = user_params.delete(:email)
     password = user_params.delete(:password)
+    time_preference = user_params.delete(:time_preference)
 
     Clearance.configuration.user_model.new(user_params).tap do |user|
       user.first_name = first_name
       user.last_name = last_name
       user.email = email
       user.password = password
+      user.time_preference = time_preference 
     end
   end
 
@@ -68,7 +76,7 @@ class Clearance::UsersController < ApplicationController
   end
 
   def permit_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password)
+    params.permit(:first_name, :last_name, :email, :password, :time_preference)
   end
 
 end

@@ -67,14 +67,38 @@ document.addEventListener("turbolinks:load", function(){
 function bookProgress(){
     booksRead = parseInt(document.getElementById("books-read").innerHTML);
     userRank = document.getElementById("user-rank");
+    progressBar = document.getElementById("progress-bar")
     if(booksRead < 4){
         userRank.innerHTML = "Caterpillar";
+        if (booksRead===1){
+            progressBar.setAttribute("style",`width:${33}%`)
+        }
+        else if(booksRead === 2){
+            progressBar.setAttribute("style",`width:${66}%`)
+        }
+        else if (booksRead ===3){
+
+            progressBar.setAttribute("style",`width:${92}%`)
+        }
     }
-    else if (booksRead > 4 && booksRead < 8){
+    else if (booksRead > 3 && booksRead < 8){
         userRank.innerHTML = "Cocoon";
+        if(booksRead ===4 ){
+            progressBar.setAttribute("style",`width:${9}%`)
+        }
+        else if (booksRead===5){
+            progressBar.setAttribute("style",`width:${33}%`)
+        }
+        else if(booksRead === 6){
+            progressBar.setAttribute("style",`width:${66}%`)
+        }
+        else if (booksRead ===7){
+
+            progressBar.setAttribute("style",`width:${92}%`)
+        }
     }
     else if (booksRead > 7){
-        userRank.innerHTML = "Butterfly"
+      userRank.innerHTML = "Butterfly";
       elements = document.getElementsByClassName("book-progress-bar");
       for(let i = 0; i < elements.length; i++){
           elements[i].classList.add("hidden");
