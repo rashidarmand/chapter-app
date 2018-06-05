@@ -1,13 +1,19 @@
 class ReadController < ApplicationController
   def index
+    @q = Book.ransack(params[:q])
+        @books = @q.result
   end
 
   def show
+    @q = Book.ransack(params[:q])
+        @books = @q.result
     @book = Book.find(params[:id])
     @chapters = @book.chapters.order(:chapter_order)
   end
 
   def chapter
+    @q = Book.ransack(params[:q])
+        @books = @q.result
     @chapter = Chapter.find(params[:chapter_id])
    
     @chunk_of_chapter = @chapter.broken_up_chapters.paginate(:page => params[:page], :per_page => 1)
