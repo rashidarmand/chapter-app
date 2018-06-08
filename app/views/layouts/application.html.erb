@@ -52,10 +52,23 @@
       <% end %>
     </div>
   </nav>
+  <% flash.keys.each do |type| %>
+    <div class="flash <%= type %>">
+      <%= flash[type] %>
+      <a class="close-button" href="#">x</a>
+    </div>
+  <% end %>
 
   <%= yield %>
 
 <% else %>
+
+  <% flash.keys.each do |type| %>
+    <div class="flash <%= type %>">
+      <%= flash[type] %>
+      <a class="close-button" href="#">x</a>
+    </div>
+  <% end %>
 
   <%= yield %>
 

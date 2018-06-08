@@ -34,7 +34,18 @@
 		<% end %>
 
 		<% if @chunk_of_chapter.total_pages == @chunk_of_chapter.current_page %>
-			<%= button_to 'Done Reading', sign_in_path, method: :get, class:"doneBtn" %>
+			<% unless current_user.chapters.include?(@chapter)%>
+				<%= form_for @user_chapter, :url => user_chapters_path do |f| %>
+					<%= f.hidden_field(:user_id, value: current_user.id) %>
+					<%= f.hidden_field(:chapter_id, value: @chapter.id) %>
+					<%= f.hidden_field(:read, value: true) %>
+					<%= button_tag( :class => "doneBtn") do %>
+						<i class="fas fa-check"></i> Chapter Complete
+					<% end %>
+				<% end %>
+			<% else %>
+				<%= link_to 'Chapter Already Completed', profile_index_path, class: 'doneBtn' %>
+			<% end %>
 		<% end %>
 	</center>
 
@@ -50,12 +61,12 @@
     <%= f.hidden_field(:book_id, value: @chapter.book.id) %>
     <%= f.hidden_field(:read, value: true) %>
     <%= f.hidden_field(:priority, value: nil) %>
-    <%= button_tag( :class => 'nextChap') do %>
-      <i class="fas fa-plus-circle"></i> Book Finished
+    <%= button_tag( :class => 'bookFin') do %>
+      <i class="fas fa-check"></i> Book Finished
     <% end %>
   <% end %>
 <% elsif @chapter == @chapter.book.chapters.last %> 
-	<%= link_to 'Book Already Completed', root_path, class: 'nextChap' %>
+	<%= link_to 'Book Already Completed', profile_index_path, class: 'bookFin' %>
 <% else %>
  <%= link_to 'Next Chapter >', read_chapter_path(@chapter.book.id, @next_chapter.id), class: 'nextChap' %>
 <% end %>

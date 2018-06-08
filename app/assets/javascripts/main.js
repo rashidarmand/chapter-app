@@ -1,7 +1,14 @@
 // Reader Settings
 // event listener to refresh turbolinks
 
+
 document.addEventListener("turbolinks:load", function(){
+    
+    let flashPanel = document.querySelector(".flash")
+    // flash timeout
+    window.setTimeout(() => {
+        flashPanel.classList.add("hide")
+      }, 3000);
 
     // sepia setting
     $(document).ready(function(){

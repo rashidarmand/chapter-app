@@ -129,10 +129,10 @@ a:hover {
     padding: 5px;
 }
 
-.bookImg {
-    width: 60px;
+div.reco div.row div.col-sm-3 img.bookImg {
+    width: 130px;
     float: left;
-    margin-right: 5px;
+    margin: 5px;
 }
 
 .bookStatus img {
@@ -240,6 +240,17 @@ pre {
     padding: 10px;
 }
 
+.bookFin {
+    float: right;
+    background-color: #7fb069; 
+    border: none;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
 .doneBtn {
     background-color: #7fb069; 
     border: none;
@@ -275,12 +286,20 @@ pre {
 
 .col-sm-2 {
     padding: 10px;
-<<<<<<< HEAD
-
-.hidden {
-=======
 }
 .hidden{
->>>>>>> 353cf81c6f86fc9951cbebc3c0ac64cf2eba7a61
     visibility: hidden;
+}
+
+.flash {
+    color: white;
+    background-color: #7fb069; 
+    border-radius: 2px;
+    padding: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.hide {
+    display: none;
 }
