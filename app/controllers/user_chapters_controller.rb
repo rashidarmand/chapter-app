@@ -55,4 +55,8 @@ class UserChaptersController < ApplicationController
   def user_chapter_params
     params.require(:user_chapter).permit(:user_id, :chapter_id, :read)
   end
+
+  def bookmark_params
+    params.require(:user_chapter).permit(:bookmark)
+  end
 end
