@@ -35,10 +35,16 @@
     
         <div class="reco">
           <p><strong>Bookmarked Chapters:</p></strong>
-          <div class="bookImg"><%= image_tag 'bookicon.jpg' %> </div>
-           <strong>Title: </strong>How to be awesome </br>
-           <strong>Author: </strong>Ronnie Digital</br>
-           <a href="/read">Read</a>
+          <div class="row">
+            <div class="col-sm-5">
+              <%= image_tag Book.find(1).image, class: 'bookImg' %>
+            </div>
+            <div class="col-sm-7">
+              <strong>Title: </strong>How to be awesome </br>
+              <strong>Author: </strong>Ronnie Digital</br>
+              <a href="/read">Read</a>
+            </div>
+            </div>
           </div>
         </div>
 

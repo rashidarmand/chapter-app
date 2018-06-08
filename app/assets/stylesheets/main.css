@@ -129,10 +129,10 @@ a:hover {
     padding: 5px;
 }
 
-.bookImg {
-    width: 60px;
+div.reco div.row div.col-sm-3 img.bookImg {
+    width: 130px;
     float: left;
-    margin-right: 5px;
+    margin: 5px;
 }
 
 .bookStatus img {
