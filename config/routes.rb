@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   put '/users/:id' => 'clearance/users#update', as: 'update_user'
   root 'home#index'
+
+  put '/user_chapters/:bookmarked' => 'user_chapters#update'
   resources :user_books
   resources :user_chapters
   resources :profile

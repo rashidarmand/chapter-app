@@ -45,6 +45,20 @@ class UserChaptersController < ApplicationController
     end
   end
 
+  def update_bookmark
+    @user_chapter = UserChapter.find_by(user_chapter_params.values)
+    
+    respond_to do |format|
+      if @user_chapter.update(bookmark_params)
+        format.html { redirect_to profile_index_path, notice: 'Chapter Completed!' }
+        format.json { render :show, status: :created, location: books_path }
+      else
+        format.html { render :new }
+        format.json { render json: profile_path.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_user_chapter
@@ -54,5 +68,9 @@ class UserChaptersController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_chapter_params
     params.require(:user_chapter).permit(:user_id, :chapter_id, :read)
+  end
+
+  def bookmark_params
+    params.require(:user_chapter).permit(:bookmark, :id)
   end
 end

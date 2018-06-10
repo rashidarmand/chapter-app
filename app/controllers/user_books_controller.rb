@@ -10,6 +10,13 @@ class UserBooksController < ApplicationController
     @user_book = UserBook.new(user_book_params)
     respond_to do |format|
       if @user_book.save
+        user = User.find(@user_book.user_id)
+        chapters = Chapter.where(book_id: @user_book.book_id)
+
+        chapters.each do |chapter|
+          UserChapter.create(user_id: user.id, chapter_id:chapter.id)
+        end
+        
         format.html { redirect_to books_path, notice: 'Book successfully added!' }
         format.json { render :show, status: :created, location: books_path }
       else

@@ -13,6 +13,16 @@
 		<button id="bm" class="iconBtn" title="Bookmark this chapter"><i class="far fa-bookmark fa-2x"></i></button>
 	</div>
 
+	<%= form_with url: user_chapter_path(UserChapter.find_by(user_id: current_user.id, chapter_id: chapter.id), method: :put, local: true do |form| %>
+		<h4>
+		  <strong>
+		<%= form.label :read, "Bookmarked Chapter" %>
+		  </h4>
+			</strong>
+			<%= hidden_field_tag(:bookmarked, true) %>
+			<%= hidden_field_tag(:id, UserChapter.id)%>
+			<%= form.submit "Submit", class: "button" %>
+	  
 	<center>  
 
 		<strong>Book: </strong> <%= @chapter.book.title %></br>
