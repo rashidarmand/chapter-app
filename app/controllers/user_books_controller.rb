@@ -41,8 +41,7 @@ class UserBooksController < ApplicationController
   def update
     @user_book = UserBook.find_by(user_id: user_book_params.values[0].to_i, book_id:user_book_params.values[1].to_i)
     # @user_book = UserBook.find(params[:id])
-    p user_book_params.values
-    p @user_book
+    
     respond_to do |format|
       if @user_book.update(user_book_params)
         format.html { redirect_to profile_index_path, notice: 'Book Completed!' }
