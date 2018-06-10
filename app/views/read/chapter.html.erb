@@ -11,12 +11,20 @@
 
 	<div class="bookmark">
 		<button id="bm" class="iconBtn" title="Bookmark this chapter"><i class="far fa-bookmark fa-2x"></i></button>
-	
+	<% if @user_chapter.bookmarked == false%>
 		<%= form_for @user_chapter, :url => url_for(:controller => 'user_chapters', :action => 'update') do |f| %>
 			<%= hidden_field_tag(:user_id, current_user.id)%>
 			<%= hidden_field_tag(:chapter_id, @chapter.id)%> 
 			<%= hidden_field_tag(:bookmarked, true)%> 
 			<%= submit_tag("Bookmark") %>
+			<%end%>
+		<%else%>
+		<%= form_for @user_chapter, :url => url_for(:controller => 'user_chapters', :action => 'update') do |f| %>
+			<%= hidden_field_tag(:user_id, current_user.id)%>
+			<%= hidden_field_tag(:chapter_id, @chapter.id)%> 
+			<%= hidden_field_tag(:bookmarked, false)%> 
+			<%= submit_tag("Remove Bookmark") %>
+			<% end %>
 			<% end %>
 		</div>
 	<center>  

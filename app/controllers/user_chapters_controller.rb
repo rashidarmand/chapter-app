@@ -32,10 +32,8 @@ class UserChaptersController < ApplicationController
   end
 
   def update
-    p user_chapter_params.values
-    p user_chapter_params.values[1]
     @user_chapter = UserChapter.find_by(user_id: user_chapter_params.values[0].to_i, chapter_id: user_chapter_params.values[1].to_i)
-    p @user_chapter
+ 
     respond_to do |format|
       if @user_chapter.update(user_chapter_params)
         format.html { redirect_to profile_index_path, notice: 'Chapter Completed!' }
