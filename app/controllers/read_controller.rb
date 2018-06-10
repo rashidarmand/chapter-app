@@ -12,12 +12,14 @@ class ReadController < ApplicationController
   end
 
   def chapter
+
     @q = Book.ransack(params[:q])
     @books = @q.result
 
-    @user_chapter = UserChapter.new
-    
     @chapter = Chapter.find(params[:chapter_id])
+
+    @user_chapter = UserChapter.find_by(user_id: current_user.id,chapter_id: @chapter.id )
+    
    
     @chunk_of_chapter = @chapter.broken_up_chapters.paginate(:page => params[:page], :per_page => 1)
    
