@@ -32,8 +32,8 @@ class UserChaptersController < ApplicationController
   end
 
   def update
-    @user_chapter = UserChapter.find_by(user_chapter_params.values)
-    # @user_book = UserBook.find(params[:id])
+    @user_chapter = UserChapter.find_by(user_id: user_chapter_params.values[0].to_i, chapter_id: user_chapter_params.values[1].to_i)
+ 
     respond_to do |format|
       if @user_chapter.update(user_chapter_params)
         format.html { redirect_to profile_index_path, notice: 'Chapter Completed!' }
@@ -45,6 +45,8 @@ class UserChaptersController < ApplicationController
     end
   end
 
+  
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_user_chapter
@@ -53,6 +55,10 @@ class UserChaptersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_chapter_params
-    params.require(:user_chapter).permit(:user_id, :chapter_id, :read)
+    params.permit(:user_id, :chapter_id, :read, :bookmarked)
+  end
+
+  def bookmark_params
+    params.require(:user_chapter).permit(:chapter_id,:user_id)
   end
 end

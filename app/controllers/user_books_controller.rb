@@ -10,6 +10,13 @@ class UserBooksController < ApplicationController
     @user_book = UserBook.new(user_book_params)
     respond_to do |format|
       if @user_book.save
+        user = User.find(@user_book.user_id)
+        chapters = Chapter.where(book_id: @user_book.book_id)
+
+        chapters.each do |chapter|
+          UserChapter.create(user_id: user.id, chapter_id:chapter.id)
+        end
+        
         format.html { redirect_to books_path, notice: 'Book successfully added!' }
         format.json { render :show, status: :created, location: books_path }
       else
@@ -32,8 +39,9 @@ class UserBooksController < ApplicationController
   end
 
   def update
-    @user_book = UserBook.find_by(user_book_params.values)
+    @user_book = UserBook.find_by(user_id: user_book_params.values[0].to_i, book_id:user_book_params.values[1].to_i)
     # @user_book = UserBook.find(params[:id])
+    
     respond_to do |format|
       if @user_book.update(user_book_params)
         format.html { redirect_to profile_index_path, notice: 'Book Completed!' }
